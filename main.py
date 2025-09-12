@@ -1,1 +1,1 @@
-print("Inital Project Commit!!!!")
+print("remember to be frankable")
