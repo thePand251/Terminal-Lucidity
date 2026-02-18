@@ -37,5 +37,7 @@ func _physics_process(delta: float) -> void:
 position = Vector2(100, 89)
 texture = ExtResource("2_yqjtg")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1999611074]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1999611074]
 script = SubResource("GDScript_uwrxv")
+
+[node name="Player Shape" type="CollisionShape2D" parent="Player" unique_id=1128245516]
