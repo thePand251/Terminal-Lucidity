@@ -1,63 +1,62 @@
 [gd_scene format=3 uid="uid://cbntir6d2sn0p"]
 
-[ext_resource type="Script" uid="uid://dkwqi8pwttyun" path="res://scenes/scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://carly6p8tm4yv" path="res://sprites/TEMP_player_walkleft.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://bvvu5hsoxmpfp" path="res://sprites/TEMP_mainchar_idle.png" id="1_3vyb7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = ExtResource("2_qhqgy")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="GDScript" id="GDScript_3vyb7"]
+resource_name = "playerController"
+script/source = "extends CharacterBody2D
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
-atlas = ExtResource("2_qhqgy")
-region = Rect2(0, 16, 16, 16)
+@export var speed = 6.0
+@export var jumpPower = 9.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("2_qhqgy")
-region = Rect2(0, 32, 16, 16)
+var speedMult = 30.0
+var jumpMult = -30.0
+var direction = 0
+#const SPEED = 300.0
+#const JUMP_VELOCITY = -400.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
-atlas = ExtResource("2_qhqgy")
-region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dqkch")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qlg0r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuyoq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fjrip")
-}],
-"loop": true,
-"name": &"Walkleft",
-"speed": 5.0
-}]
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur7pv"]
-size = Vector2(8, 13)
+	# Handle jump.
+	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
+		velocity.y = jumpPower*jumpMult
 
-[node name="Player" type="CharacterBody2D" unique_id=609073196]
-motion_mode = 1
-script = ExtResource("1_g2els")
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	direction = Input.get_axis(\"moveLeft\", \"moveRight\")
+	if direction:
+		velocity.x = direction * speed * speedMult
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed * speedMult)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=354733457]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_smehm")
-animation = &"Walkleft"
-frame = 3
-frame_progress = 0.53175724
+	move_and_slide()
+"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=827592870]
-position = Vector2(0, 1.5)
-shape = SubResource("RectangleShape2D_ur7pv")
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 4.0
+height = 14.0
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1811675460]
-zoom = Vector2(5, 5)
-position_smoothing_enabled = true
-position_smoothing_speed = 11.0
+[node name="Player" type="CharacterBody2D" unique_id=2136678792]
+script = SubResource("GDScript_3vyb7")
+
+[node name="Player Shape" type="CollisionShape2D" parent="." unique_id=1460789920]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1179640733]
+zoom = Vector2(6, 6)
+
+[node name="PlayerAnimator" type="Node2D" parent="." unique_id=244375189]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator" unique_id=1565235960]
+root_node = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator" unique_id=582235675]
+position = Vector2(0, -8)
+texture = ExtResource("1_3vyb7")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)

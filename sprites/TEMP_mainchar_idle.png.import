@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bojrnqirekb7k"
-path="res://.godot/imported/TEMP_mainchar.png-7023ea3e1e898342bf30ba17da4fcaab.ctex"
+uid="uid://bvvu5hsoxmpfp"
+path="res://.godot/imported/TEMP_mainchar_idle.png-c12b973fe1432a86914ed4a5965d71a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/TEMP_mainchar.png"
-dest_files=["res://.godot/imported/TEMP_mainchar.png-7023ea3e1e898342bf30ba17da4fcaab.ctex"]
+source_file="res://sprites/TEMP_mainchar_idle.png"
+dest_files=["res://.godot/imported/TEMP_mainchar_idle.png-c12b973fe1432a86914ed4a5965d71a7.ctex"]
 
 [params]
 

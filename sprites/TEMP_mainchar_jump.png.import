@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carly6p8tm4yv"
-path="res://.godot/imported/TEMP_player_walkleft.png-b026e20964c784488429dca0c3fae1d0.ctex"
+uid="uid://tiwnwxn3cbxv"
+path="res://.godot/imported/TEMP_mainchar_jump.png-5783dfe3cd37fe36ee06ea660ca8e2af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/TEMP_player_walkleft.png"
-dest_files=["res://.godot/imported/TEMP_player_walkleft.png-b026e20964c784488429dca0c3fae1d0.ctex"]
+source_file="res://sprites/TEMP_mainchar_jump.png"
+dest_files=["res://.godot/imported/TEMP_mainchar_jump.png-5783dfe3cd37fe36ee06ea660ca8e2af.ctex"]
 
 [params]
 
