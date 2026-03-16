@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://c3apye5r17nb7"]
 
 [ext_resource type="Texture2D" uid="uid://ddfqq1fi087ai" path="res://sprites/TEMP_floortile.png" id="2_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://cbntir6d2sn0p" path="res://scenes/player.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cbntir6d2sn0p" path="res://scenes/areas/player.tscn" id="3_lnu2h"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yqjtg"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("2_lnu2h")

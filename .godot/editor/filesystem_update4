@@ -1,3 +1,5 @@
 res://scenes/player.tscn
 res://scenes/game.tscn
+res://scenes/scripts/player_animator.gd
 res://scenes/scripts/player_controller.gd
+res://scenes/areas/player.tscn

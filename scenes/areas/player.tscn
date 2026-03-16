@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://cbntir6d2sn0p"]
+
+[ext_resource type="Script" uid="uid://cuanattouopgk" path="res://scenes/scripts/player_controller.gd" id="1_0fxno"]
+[ext_resource type="Texture2D" uid="uid://br0oyuu00wjw5" path="res://sprites/playerAnimations.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dcl2iwt58vv1i" path="res://scenes/scripts/player_animator.gd" id="2_iclr2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="Animation" id="Animation_g2els"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_qhqgy"]
+resource_name = "fall"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(16, 16, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_dqkch"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 16, 16), Rect2(16, 0, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_qlg0r"]
+resource_name = "jump"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 16, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_tuyoq"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 32, 16, 16), Rect2(16, 32, 16, 16), Rect2(32, 32, 16, 16), Rect2(48, 32, 16, 16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fjrip"]
+_data = {
+&"RESET": SubResource("Animation_g2els"),
+&"fall": SubResource("Animation_qhqgy"),
+&"idle": SubResource("Animation_dqkch"),
+&"jump": SubResource("Animation_qlg0r"),
+&"walk": SubResource("Animation_tuyoq")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=2136678792]
+script = ExtResource("1_0fxno")
+
+[node name="Player Shape" type="CollisionShape2D" parent="." unique_id=1460789920]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1179640733]
+zoom = Vector2(6, 6)
+
+[node name="PlayerAnimator" type="Node2D" parent="." unique_id=244375189 node_paths=PackedStringArray("playerController", "animationPlayer", "sprite")]
+script = ExtResource("2_iclr2")
+playerController = NodePath("..")
+animationPlayer = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite2D")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator" unique_id=1565235960]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_fjrip")
+autoplay = &"idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator" unique_id=1792847584]
+position = Vector2(0, -8)
+texture = ExtResource("1_3vyb7")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
