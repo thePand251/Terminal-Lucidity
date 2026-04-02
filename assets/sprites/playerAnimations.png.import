@@ -2,36 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:sprites/playerAnimations.png.import
-uid="uid://br0oyuu00wjw5"
-path="res://.godot/imported/playerAnimations.png-8f785fe130d007fed8047f13c2f439e4.ctex"
-=======
-<<<<<<<< Updated upstream:assets/sprites/TEMP_floortile.png.import
-uid="uid://ddfqq1fi087ai"
-path="res://.godot/imported/TEMP_floortile.png-aee2735efdf62c287240ed660ee9ccf0.ctex"
-========
-uid="uid://3ig0vmynlqtj"
+uid="uid://rdf72vy4jh52"
 path="res://.godot/imported/playerAnimations.png-da1f296c2819ac3ba532544bfbae7805.ctex"
->>>>>>>> Stashed changes:assets/sprites/playerAnimations.png.import
->>>>>>> Stashed changes:assets/sprites/playerAnimations.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:sprites/playerAnimations.png.import
-source_file="res://sprites/playerAnimations.png"
-dest_files=["res://.godot/imported/playerAnimations.png-8f785fe130d007fed8047f13c2f439e4.ctex"]
-=======
-<<<<<<<< Updated upstream:assets/sprites/TEMP_floortile.png.import
-source_file="res://sprites/TEMP_floortile.png"
-dest_files=["res://.godot/imported/TEMP_floortile.png-aee2735efdf62c287240ed660ee9ccf0.ctex"]
-========
 source_file="res://assets/sprites/playerAnimations.png"
 dest_files=["res://.godot/imported/playerAnimations.png-da1f296c2819ac3ba532544bfbae7805.ctex"]
->>>>>>>> Stashed changes:assets/sprites/playerAnimations.png.import
->>>>>>> Stashed changes:assets/sprites/playerAnimations.png.import
 
 [params]
 

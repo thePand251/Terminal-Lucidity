@@ -1,8 +1,3 @@
-res://scenes/
-<<<<<<< Updated upstream
-res://scenes/scripts/
-res://sprites/
-=======
-res://sprites/
-res://scenes/scripts/
->>>>>>> Stashed changes
+res://assets/scenes/areas/
+res://assets/scripts/
+res://assets/sprites/
