@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< Updated upstream:assets/sprites/TEMP_wall.png.import
 uid="uid://bgux8sf4vhykh"
 path="res://.godot/imported/TEMP_wall.png-0cae2a7cba9cc9bfd2c16a28f16f9a23.ctex"
+========
+uid="uid://bu7513sm41xp3"
+path="res://.godot/imported/TEMP_floortile.png-9cff5f6b41ba589a492ff2ecb7946435.ctex"
+>>>>>>>> Stashed changes:assets/sprites/TEMP_floortile.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< Updated upstream:assets/sprites/TEMP_wall.png.import
 source_file="res://sprites/TEMP_wall.png"
 dest_files=["res://.godot/imported/TEMP_wall.png-0cae2a7cba9cc9bfd2c16a28f16f9a23.ctex"]
+========
+source_file="res://assets/sprites/TEMP_floortile.png"
+dest_files=["res://.godot/imported/TEMP_floortile.png-9cff5f6b41ba589a492ff2ecb7946435.ctex"]
+>>>>>>>> Stashed changes:assets/sprites/TEMP_floortile.png.import
 
 [params]
 

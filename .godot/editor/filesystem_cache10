@@ -1,4 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
+<<<<<<< Updated upstream
 ::res://::1773695770
 README.md::TextFile::-1::1771968033::0::1::::<><><>0<>0<><>::
 ::res://scenes/::1773695770
@@ -16,3 +17,18 @@ TEMP_mainchar_idle.png::CompressedTexture2D::3905006642736763909::1772143165::17
 TEMP_mainchar_jump.png::CompressedTexture2D::1351463231989082583::1771969488::1772141811::1::::<><><>0<>0<>e9fa8895d173125580dde13b133af108<>res://.godot/imported/TEMP_mainchar_jump.png-5783dfe3cd37fe36ee06ea660ca8e2af.ctex::
 TEMP_mainchar_walk.png::CompressedTexture2D::5644160582535603351::1771969654::1772141811::1::::<><><>0<>0<>5ca0fbdbf22d4030cb46ebfcf026fbc6<>res://.godot/imported/TEMP_mainchar_walk.png-aa71a5dfc41356ec7ad2c626335fb2bb.ctex::
 TEMP_wall.png::CompressedTexture2D::2850297677125299363::1771022138::1772141811::1::::<><><>0<>0<>824efd5652cb87d8c7a6fe353fb28df7<>res://.godot/imported/TEMP_wall.png-0cae2a7cba9cc9bfd2c16a28f16f9a23.ctex::
+=======
+::res://::1775161534
+icon.svg::CompressedTexture2D::6898171481066636582::1774990029::1774990040::1::::<><><>0<>0<>2b21f0faaa952528b7d5bf415c140056<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1774990029::0::1::::<><><>0<>0<><>::
+::res://assets/::1774991508
+::res://assets/scenes/::1774991573
+::res://assets/scenes/areas/::1774993530
+game.tscn::PackedScene::6739082860442276150::1774993530::0::1::::<><><>0<>0<><>::uid://bgwv1x52foqj0::::res://assets/scripts/player_controller.gd<>uid://3ig0vmynlqtj::::res://assets/sprites/playerAnimations.png
+map.tscn::PackedScene::2445695682701085843::1774993527::0::1::::<><><>0<>0<><>::uid://bu7513sm41xp3::::res://assets/sprites/TEMP_floortile.png<>uid://c3apye5r17nb7::::res://assets/scenes/areas/game.tscn
+::res://assets/scripts/::1774991584
+player_controller.gd::GDScript::2854292799215426475::1774990275::0::1::::PlayerController<>CharacterBody2D<><>0<>0<><>::
+::res://assets/sprites/::1774992079
+playerAnimations.png::CompressedTexture2D::1982212713337886199::1774990487::1774991411::1::::<><><>0<>0<>1a1d8120e25fdf6a875922e4e8ac8a14<>res://.godot/imported/playerAnimations.png-da1f296c2819ac3ba532544bfbae7805.ctex::
+TEMP_floortile.png::CompressedTexture2D::3858127084053494166::1774990585::1774991411::1::::<><><>0<>0<>887e4b17e15eaa014817870b9e540ccf<>res://.godot/imported/TEMP_floortile.png-9cff5f6b41ba589a492ff2ecb7946435.ctex::
+>>>>>>> Stashed changes
