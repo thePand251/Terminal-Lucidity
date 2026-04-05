@@ -82,6 +82,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_kvpfn")
 }],
 "loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gee14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tnpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtaks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvpfn")
+}],
+"loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
@@ -91,6 +108,11 @@ script = ExtResource("1_ciydl")
 PlayerSprite = NodePath("AnimatedSprite2D")
 PlayerCollider = NodePath("Player Shape")
 jumpHeight = 1.5
+run = true
+jump = true
+idle = true
+walk = true
+falling = true
 
 [node name="Player Shape" type="CollisionShape2D" parent="." unique_id=1460789920]
 position = Vector2(0, -7)
@@ -102,4 +124,4 @@ zoom = Vector2(6, 6)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1201258973]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_eiwrt")
-animation = &"walk"
+animation = &"run"
