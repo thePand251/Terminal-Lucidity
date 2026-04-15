@@ -114,7 +114,14 @@ class_name PlatformerController2D
 ##Animations must be named "roll" all lowercase as the check box says
 @export var roll: bool
 
+var is_shooting : bool 
 
+func player_shooting(delta : float):
+	var input_direction = Input.get_vector("left", "right", "up", "down")
+	
+	#if input_direction.positive_x == <0:
+		#pass
+	
 
 #Variables determined by the developer set ones.
 var appliedGravity: float
@@ -189,7 +196,7 @@ func _ready():
 func _updateData():
 	acceleration = maxSpeed / timeToReachMaxSpeed
 	deceleration = -maxSpeed / timeToReachZeroSpeed
-	
+	print("yay")
 	jumpMagnitude = (10.0 * jumpHeight) * gravityScale
 	jumpCount = jumps
 	
@@ -258,6 +265,15 @@ func _process(_delta):
 		latched = false
 		wasLatched = true
 		_setLatch(0.2, false)
+
+	if Input.is_action_just_pressed("switchMode"):
+		if is_shooting:
+			print("ranged")
+			print(is_shooting)
+		else:
+			print("melee")
+			print(is_shooting)
+		is_shooting = !is_shooting
 
 	if rightHold and !latched:
 		anim.scale.x = animScaleLock.x

@@ -1,12 +1,8 @@
-<<<<<<< Updated upstream
-=======
+AnimatedSprite2D
 TileMap
 CharacterBody2D
 Camera2D
 CollisionShape2D
-AnimatedSprite2D
-AnimatedSprite2D
->>>>>>> Stashed changes
 Sprite2D
 Node2D
 AnimationPlayer
@@ -14,8 +10,3 @@ Camera2D
 CollisionPolygon2D
 CollisionShape2D
 CharacterBody2D
-<<<<<<< Updated upstream
-AnimatedSprite2D
-=======
->>>>>>> Stashed changes
-Polygon2D
