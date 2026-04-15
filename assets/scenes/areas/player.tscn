@@ -177,3 +177,6 @@ zoom = Vector2(6, 6)
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_eiwrt")
 animation = &"run_ranged"
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=925062913]
+position = Vector2(8, -5)

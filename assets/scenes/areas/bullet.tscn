@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dl0symj8xklyn"]
 
 [ext_resource type="Texture2D" uid="uid://bcibgvsjdtoom" path="res://assets/sprites/TEMP_bullet.png" id="1_g4jvw"]
+[ext_resource type="Script" uid="uid://cqmst0tck8goc" path="res://assets/scripts/bullet.gd" id="2_jueuo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jueuo"]
 atlas = ExtResource("1_g4jvw")
@@ -20,3 +21,10 @@ animations = [{
 [node name="Bullet" type="AnimatedSprite2D" unique_id=129013905]
 sprite_frames = SubResource("SpriteFrames_b8rc5")
 animation = &"shoot"
+script = ExtResource("2_jueuo")
+
+[node name="Timer" type="Timer" parent="." unique_id=492378590]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

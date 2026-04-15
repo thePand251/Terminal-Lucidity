@@ -114,10 +114,22 @@ class_name PlatformerController2D
 ##Animations must be named "roll" all lowercase as the check box says
 @export var roll: bool
 
-var is_shooting : bool 
+var is_melee : bool 
+var bullet = preload("res://assets/scenes/areas/bullet.tscn")
+var muzzlePosition
+@onready var muzzle : Marker2D = $Muzzle
 
-func player_shooting(delta : float):
-	var input_direction = Input.get_vector("left", "right", "up", "down")
+func player_shooting(delta):
+	if is_melee and Input.is_action_just_pressed("attack"):
+		var inputDirection = Input.get_vector("left", "right", "up", "down")
+		var bulletInstance = bullet.instantiate() as Node2D
+		if wasPressingR == false:
+			bulletInstance.direction = -1
+		elif wasPressingR:
+			bulletInstance.direction = 1
+		bulletInstance.global_position = muzzle.global_position
+		get_parent().add_child(bulletInstance)
+		print("shot")
 	
 	#if input_direction.positive_x == <0:
 		#pass
@@ -190,6 +202,7 @@ func _ready():
 	wasMovingR = true
 	anim = PlayerSprite
 	col = PlayerCollider
+	muzzlePosition = muzzle.position
 	
 	_updateData()
 	
@@ -256,7 +269,7 @@ func _updateData():
 	
 	
 
-func _process(_delta):
+func _process(delta):
 	#INFO animations
 	#directions
 	if is_on_wall() and !is_on_floor() and latch and wallLatching and ((wallLatchingModifer and latchHold) or !wallLatchingModifer):
@@ -267,13 +280,15 @@ func _process(_delta):
 		_setLatch(0.2, false)
 
 	if Input.is_action_just_pressed("switchMode"):
-		if is_shooting:
-			print("ranged")
-			print(is_shooting)
-		else:
+		if is_melee:
 			print("melee")
-			print(is_shooting)
-		is_shooting = !is_shooting
+			print(is_melee)
+		else:
+			print("ranged")
+			print(is_melee)
+		is_melee = !is_melee
+	
+	player_shooting(delta)
 
 	if rightHold and !latched:
 		anim.scale.x = animScaleLock.x
