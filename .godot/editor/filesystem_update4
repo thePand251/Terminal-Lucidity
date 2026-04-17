@@ -1,2 +1,2 @@
-res://assets/scripts/player_controller.gd
-res://assets/scripts/bullet.gd
+res://assets/scenes/areas/player.tscn
+res://assets/scenes/areas/game.tscn
