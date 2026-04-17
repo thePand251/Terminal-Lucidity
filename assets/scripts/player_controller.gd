@@ -114,14 +114,18 @@ class_name PlatformerController2D
 ##Animations must be named "roll" all lowercase as the check box says
 @export var roll: bool
 
+var fire_cadence = 0.12
+var fire_cooldown = 0.0
+
 var is_melee : bool 
 var bullet = preload("res://assets/scenes/areas/bullet.tscn")
 var muzzlePosition
 @onready var muzzle : Marker2D = $Muzzle
 
-func player_shooting(delta):
-	if is_melee and Input.is_action_just_pressed("attack"):
-		var inputDirection = Input.get_vector("left", "right", "up", "down")
+func player_shooting(_delta):
+	if is_melee and Input.is_action_just_pressed("attack") and fire_cooldown <= 0:
+		fire_cooldown = fire_cadence
+		
 		var bulletInstance = bullet.instantiate() as Node2D
 		if wasPressingR == false:
 			bulletInstance.direction = -1
@@ -131,8 +135,12 @@ func player_shooting(delta):
 		get_parent().add_child(bulletInstance)
 		print("shot")
 	
-	#if input_direction.positive_x == <0:
-		#pass
+func player_muzzle_position():
+	if wasPressingR:
+		muzzle.position.x = muzzlePosition.x
+	elif wasPressingR == false:
+		muzzle.position.x = -muzzlePosition.x
+	
 	
 
 #Variables determined by the developer set ones.
@@ -289,6 +297,8 @@ func _process(delta):
 		is_melee = !is_melee
 	
 	player_shooting(delta)
+	fire_cooldown -= delta
+	
 
 	if rightHold and !latched:
 		anim.scale.x = animScaleLock.x
@@ -374,6 +384,8 @@ func _physics_process(delta):
 	rollTap = Input.is_action_just_pressed("roll")
 	downTap = Input.is_action_just_pressed("down")
 	twirlTap = Input.is_action_just_pressed("twirl")
+	
+	player_muzzle_position()
 	
 	
 	#INFO Left and Right Movement
