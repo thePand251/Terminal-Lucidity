@@ -18,6 +18,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jueuo"]
+radius = 3.0
+height = 6.0
+
 [node name="Bullet" type="AnimatedSprite2D" unique_id=129013905]
 sprite_frames = SubResource("SpriteFrames_b8rc5")
 animation = &"shoot"
@@ -27,4 +31,13 @@ script = ExtResource("2_jueuo")
 one_shot = true
 autostart = true
 
+[node name="Hitbox" type="Area2D" parent="." unique_id=1235578307]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=994386025]
+shape = SubResource("CapsuleShape2D_jueuo")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

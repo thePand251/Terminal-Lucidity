@@ -78,6 +78,12 @@ down={
 "events": []
 }
 
+[layer_names]
+
+2d_physics/layer_1="MAP"
+2d_physics/layer_2="PLAYER"
+2d_physics/layer_3="ENEMY"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

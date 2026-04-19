@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dd2i252u2fb50"]
+
+[ext_resource type="Texture2D" uid="uid://dfnmhgtt4v8io" path="res://assets/sprites/TEMP_bulletImpact.png" id="1_13wtj"]
+[ext_resource type="Script" uid="uid://rcxxohaosoyb" path="res://assets/scripts/bullet_impact.gd" id="2_w6xre"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg8cq"]
+atlas = ExtResource("1_13wtj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wd5om"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg8cq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bulletImpact" type="AnimatedSprite2D" unique_id=153017349]
+sprite_frames = SubResource("SpriteFrames_wd5om")
+script = ExtResource("2_w6xre")
+
+[node name="Timer" type="Timer" parent="." unique_id=1460605312]
+wait_time = 0.4
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://37iaqkwjexv6"]
+
+[ext_resource type="Script" uid="uid://sqiu6bubad3p" path="res://assets/scripts/enemy_test.gd" id="1_iax8c"]
+[ext_resource type="Texture2D" uid="uid://bdnwxuy7s3r5q" path="res://assets/sprites/TEMP_dummy.png" id="1_oyj5e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iax8c"]
+atlas = ExtResource("1_oyj5e")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qkn5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iax8c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkn5u"]
+radius = 13.0
+height = 62.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iax8c"]
+radius = 13.0
+height = 62.0
+
+[node name="EnemyTest" type="CharacterBody2D" unique_id=597877175]
+script = ExtResource("1_iax8c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=837785587]
+sprite_frames = SubResource("SpriteFrames_qkn5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139088977]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_qkn5u")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1185904659]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1287961790]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_iax8c")
+debug_color = Color(0.9254902, 0, 0, 0.41960785)
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

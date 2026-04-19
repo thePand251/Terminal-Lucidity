@@ -134,6 +134,8 @@ func player_shooting(_delta):
 		bulletInstance.global_position = muzzle.global_position
 		get_parent().add_child(bulletInstance)
 		print("shot")
+	elif is_melee == false and Input.is_action_just_pressed("attack"):
+		pass
 	
 func player_muzzle_position():
 	if wasPressingR:
@@ -217,7 +219,6 @@ func _ready():
 func _updateData():
 	acceleration = maxSpeed / timeToReachMaxSpeed
 	deceleration = -maxSpeed / timeToReachZeroSpeed
-	print("yay")
 	jumpMagnitude = (10.0 * jumpHeight) * gravityScale
 	jumpCount = jumps
 	
@@ -290,10 +291,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("switchMode"):
 		if is_melee:
 			print("melee")
-			print(is_melee)
+			print("is_melee is ",is_melee)
 		else:
 			print("ranged")
-			print(is_melee)
+			print("is_melee is ",is_melee)
 		is_melee = !is_melee
 	
 	player_shooting(delta)

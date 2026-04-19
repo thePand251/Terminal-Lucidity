@@ -154,6 +154,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciydl"]
+size = Vector2(26, 29)
+
 [node name="Player" type="CharacterBody2D" unique_id=2136678792 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider")]
 script = ExtResource("1_ciydl")
 PlayerSprite = NodePath("AnimatedSprite2D")
@@ -171,12 +174,22 @@ shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1179640733]
 offset = Vector2(0, -24)
-zoom = Vector2(6, 6)
+zoom = Vector2(3.5, 3.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1201258973]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_eiwrt")
 animation = &"run"
 
+[node name="MeleeHitbox" type="Area2D" parent="AnimatedSprite2D" unique_id=150762153]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/MeleeHitbox" unique_id=1863636233]
+position = Vector2(23, 13)
+shape = SubResource("RectangleShape2D_ciydl")
+
 [node name="Muzzle" type="Marker2D" parent="." unique_id=925062913]
 position = Vector2(15, -25)
+
+[connection signal="area_entered" from="AnimatedSprite2D/MeleeHitbox" to="." method="_on_melee_hitbox_area_entered"]

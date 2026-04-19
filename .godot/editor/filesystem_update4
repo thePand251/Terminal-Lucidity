@@ -1,2 +1,6 @@
-res://assets/scenes/areas/player.tscn
+res://assets/scripts/enemy_test.tscn
+res://assets/scripts/enemy_test.gd
 res://assets/scenes/areas/game.tscn
+res://assets/scripts/bullet.gd
+res://assets/scenes/areas/bullet.tscn
+res://assets/scripts/bullet_impact.gd

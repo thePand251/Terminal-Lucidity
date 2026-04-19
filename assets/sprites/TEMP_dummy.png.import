@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq5afy4mt6o2"
-path="res://.godot/imported/TEMP_mainchar_attack_melee.png-a85f436c4132229afbd18791ddcea355.ctex"
+uid="uid://bdnwxuy7s3r5q"
+path="res://.godot/imported/TEMP_dummy.png-169962e1e74e20fc415d11f308c777e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/TEMP_mainchar_attack_melee.png"
-dest_files=["res://.godot/imported/TEMP_mainchar_attack_melee.png-a85f436c4132229afbd18791ddcea355.ctex"]
+source_file="res://assets/sprites/TEMP_dummy.png"
+dest_files=["res://.godot/imported/TEMP_dummy.png-169962e1e74e20fc415d11f308c777e7.ctex"]
 
 [params]
 
