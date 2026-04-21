@@ -114,7 +114,7 @@ class_name PlatformerController2D
 ##Animations must be named "roll" all lowercase as the check box says
 @export var roll: bool
 
-var fire_cadence = 0.12
+var fire_cadence = 0.25
 var fire_cooldown = 0.0
 
 var is_melee : bool 

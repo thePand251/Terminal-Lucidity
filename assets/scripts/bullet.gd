@@ -2,7 +2,7 @@ extends AnimatedSprite2D
 
 var bulletImpact = preload("res://assets/scenes/areas/bullet_impact.tscn")
 
-var speed : int = 100
+var speed : int = 400
 var direction : int
 func _physics_process(delta):
 	move_local_x(direction * speed * delta)
