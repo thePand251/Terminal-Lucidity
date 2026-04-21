@@ -1,15 +1,31 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1775356487
-README.md::TextFile::-1::1775343809::0::1::::<><><>0<>0<><>::
-::res://assets/::1775343833
-::res://assets/scenes/::1775343833
-::res://assets/scenes/areas/::1775343833
-game.tscn::PackedScene::6739082860442276150::1775343809::0::1::::<><><>0<>0<><>::uid://bpa5qyqunk8c3::::res://assets/sprites/TEMP_floortile.png<>uid://cbntir6d2sn0p::::res://assets/scenes/areas/player.tscn
-player.tscn::PackedScene::4871035971999813621::1775343809::0::1::::<><><>0<>0<><>::uid://cuanattouopgk::::res://assets/scripts/player_controller.gd<>uid://rdf72vy4jh52::::res://assets/sprites/playerAnimations.png
-::res://assets/scripts/::1775343833
-player_animator.gd::GDScript::7324002725078958600::1775343809::0::1::::<>Node2D<><>0<>0<><>::
-player_controller.gd::GDScript::6177408589011140930::1775343809::0::1::::PlatformerController2D<>CharacterBody2D<><>0<>0<><>::
-::res://assets/sprites/::1775343833
-playerAnimations.png::CompressedTexture2D::1199765657178432267::1775343809::1775356488::1::::<><><>0<>0<>c9e219bc22d497f1fa73260ad6b3c2e6<>res://.godot/imported/playerAnimations.png-da1f296c2819ac3ba532544bfbae7805.ctex::
-TEMP_floortile.png::CompressedTexture2D::3441104706952845316::1775343809::1775356488::1::::<><><>0<>0<>5e61ece15e2694dc20c0d256eca2e43c<>res://.godot/imported/TEMP_floortile.png-9cff5f6b41ba589a492ff2ecb7946435.ctex::
-TEMP_mainchar_attack_melee.png::CompressedTexture2D::105040698512485867::1775343809::1775356488::1::::<><><>0<>0<>406feeec219e88b24964c932c441f1b0<>res://.godot/imported/TEMP_mainchar_attack_melee.png-a85f436c4132229afbd18791ddcea355.ctex::
+::res://::1776805751
+README.md::TextFile::-1::1775162569::0::1::::<><><>0<>0<><>::
+::res://art/::1776805751
+::res://art/Background Art/::1775678108
+::res://art/Character Art/::1776805842
+Monster Hunter Character Art - 1.FALL.OUTLINED (1).png::CompressedTexture2D::4675414810471303819::1776805751::1776806229::1::::<><><>0<>0<>cead1ef81fa7528bd96d139e45b1d3b0<>res://.godot/imported/Monster Hunter Character Art - 1.FALL.OUTLINED (1).png-284ea0bf458f0d0ea10cf1f464071531.ctex::
+Monster Hunter Character Art - 1.IDLE (1).png::CompressedTexture2D::5904917310603220532::1776805751::1776806229::1::::<><><>0<>0<>ac16e80809f578af4044aa36aa67ba7a<>res://.godot/imported/Monster Hunter Character Art - 1.IDLE (1).png-cb57cc469b146a82c4e458807d21677c.ctex::
+Monster Hunter Character Art - 1.IDLE.OUTLINED.png::CompressedTexture2D::5759604980108133648::1776805751::1776806229::1::::<><><>0<>0<>ca28a9ef32270a06df15026decd85c63<>res://.godot/imported/Monster Hunter Character Art - 1.IDLE.OUTLINED.png-6c1a10c7b1e095b085a678a4b6d7c819.ctex::
+Monster Hunter Character Art - 1.JUMP.OUTLINED.png::CompressedTexture2D::1385101825655426556::1776805751::1776806229::1::::<><><>0<>0<>4d265e10d4d097340d4fefa6639acd65<>res://.godot/imported/Monster Hunter Character Art - 1.JUMP.OUTLINED.png-8de9093beef952a1d9e125c90859311b.ctex::
+Monster Hunter Character Art - 1.melee.attack.png::CompressedTexture2D::4113278081156902178::1776805751::1776806229::1::::<><><>0<>0<>8c5ac615969b534f159ffc5ce081ab07<>res://.godot/imported/Monster Hunter Character Art - 1.melee.attack.png-bf4063cc15454d8479fb6ee3e53ad1e4.ctex::
+Monster Hunter Character Art.WalkingAnimation.WIP.png::CompressedTexture2D::5805358893351665137::1776805751::1776806229::1::::<><><>0<>0<>72183b55f1a166a9b60167c82370637f<>res://.godot/imported/Monster Hunter Character Art.WalkingAnimation.WIP.png-e27322baea9c09564d1122c7c3c0d982.ctex::
+playerAnimations.png::CompressedTexture2D::8270857853295278830::1776805817::1776806229::1::::<><><>0<>0<>4cbae840ab96133bd8fdd18910db21a7<>res://.godot/imported/playerAnimations.png-1b1708435175b821f8390f75a2af8682.ctex::
+::res://art/Stage Art/::1775678108
+::res://art/Temp Art/::1776805751
+TEMP_floortile.png::CompressedTexture2D::5449768699638635667::1776805751::1776806229::1::::<><><>0<>0<>eb90dc23b0a58dc072b421853b78844c<>res://.godot/imported/TEMP_floortile.png-280775679c783869db1681cbbc77e2f4.ctex::
+TEMP_mainchar_attack_melee.png::CompressedTexture2D::7413665191394386427::1776805751::1776806229::1::::<><><>0<>0<>63c5e3e857f401b099ee9dc057799f2c<>res://.godot/imported/TEMP_mainchar_attack_melee.png-88356c30fe7243d0c9d211b52bb03e61.ctex::
+TEMP_mainchar_jump.png::CompressedTexture2D::4746183626383775997::1776805751::1776806229::1::::<><><>0<>0<>e93304522d39bc9ed02da0e3fb429ead<>res://.godot/imported/TEMP_mainchar_jump.png-38c1e255e4dc559be9e8a82ff1f3180a.ctex::
+TEMP_mainchar_walk.png::CompressedTexture2D::5314467185975961184::1776805751::1776806229::1::::<><><>0<>0<>a5ca35a8560b504068bbc483ed0b70fc<>res://.godot/imported/TEMP_mainchar_walk.png-4529fbf0a6b71026c7041477d32c1a0f.ctex::
+TEMP_wall.png::CompressedTexture2D::6231562271789974660::1776805751::1776806229::1::::<><><>0<>0<>38407098c94c2f905f1294dd89baea0c<>res://.godot/imported/TEMP_wall.png-f9350e6c4f882842094556ff4ce76372.ctex::
+::res://assets/::1776805751
+::res://assets/scenes/::1776805751
+::res://assets/scenes/areas/::1776805751
+game.tscn::PackedScene::6739082860442276150::1776805751::0::1::::<><><>0<>0<><>::uid://bpa5qyqunk8c3::::res://assets/sprites/TEMP_floortile.png<>uid://cbntir6d2sn0p::::res://assets/scenes/areas/player.tscn
+player.tscn::PackedScene::4871035971999813621::1776805751::0::1::::<><><>0<>0<><>::uid://cuanattouopgk::::res://assets/scripts/player_controller.gd<>uid://cmd3y70yt7m7m::::res://assets/sprites/playerAnimations.png
+::res://assets/scripts/::1776805751
+player_controller.gd::GDScript::6177408589011140930::1776805751::0::1::::PlatformerController2D<>CharacterBody2D<><>0<>0<><>::
+::res://assets/sprites/::1776805751
+playerAnimations.png::CompressedTexture2D::1199765657178432267::1776805751::1776806229::1::::<><><>0<>0<>c9e219bc22d497f1fa73260ad6b3c2e6<>res://.godot/imported/playerAnimations.png-da1f296c2819ac3ba532544bfbae7805.ctex::
+TEMP_floortile.png::CompressedTexture2D::3441104706952845316::1775162586::1775677964::1::::<><><>0<>0<>5e61ece15e2694dc20c0d256eca2e43c<>res://.godot/imported/TEMP_floortile.png-9cff5f6b41ba589a492ff2ecb7946435.ctex::
+TEMP_mainchar_attack_melee.png::CompressedTexture2D::105040698512485867::1776805751::1776806229::1::::<><><>0<>0<>406feeec219e88b24964c932c441f1b0<>res://.godot/imported/TEMP_mainchar_attack_melee.png-a85f436c4132229afbd18791ddcea355.ctex::
