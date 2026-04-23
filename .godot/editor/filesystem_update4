@@ -1,6 +1,2 @@
-res://assets/scenes/areas/bullet_impact.tscn
-res://assets/scripts/bullet.gd
-res://assets/scenes/areas/bullet.tscn
+res://assets/scenes/areas/enemy_death_effect.tscn
 res://assets/scenes/areas/game.tscn
-res://assets/scripts/enemy_test.gd
-res://assets/scripts/enemy_death_effect.gd
