@@ -27,7 +27,7 @@ radius = 13.0
 height = 62.0
 
 [node name="EnemyTest" type="CharacterBody2D" unique_id=597877175]
-position = Vector2(-227, -87)
+position = Vector2(2, 1)
 script = ExtResource("1_iax8c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=837785587]

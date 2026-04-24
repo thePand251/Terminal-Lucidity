@@ -41,4 +41,4 @@ jumpHeight = 1.9
 [node name="Node2D" type="Node2D" parent="." unique_id=1980890221]
 
 [node name="EnemyTest" parent="Node2D" unique_id=597877175 instance=ExtResource("3_l3gui")]
-position = Vector2(-225, -81)
+position = Vector2(-265, 64)

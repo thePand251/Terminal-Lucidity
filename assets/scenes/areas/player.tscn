@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbntir6d2sn0p"]
 
 [ext_resource type="Script" uid="uid://cuanattouopgk" path="res://assets/scripts/player_controller.gd" id="1_ciydl"]
-[ext_resource type="Texture2D" uid="uid://cmd3y70yt7m7m" path="res://assets/sprites/playerAnimations.png" id="2_eqpql"]
+[ext_resource type="Texture2D" uid="uid://c1likmbxnj7cj" path="res://assets/sprites/playerAnimations.png" id="2_eqpql"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 height = 40.0
@@ -140,20 +140,53 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciydl"]
-size = Vector2(26, 29)
-
 [node name="Player" type="CharacterBody2D" unique_id=2136678792 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider")]
 position = Vector2(0, 61)
 script = ExtResource("1_ciydl")
+README = null
 PlayerSprite = NodePath("AnimatedSprite2D")
 PlayerCollider = NodePath("Player Shape")
+maxSpeed = null
+timeToReachMaxSpeed = null
+timeToReachZeroSpeed = null
+directionalSnap = null
+runningModifier = null
 jumpHeight = 2.5
+jumps = null
+gravityScale = null
+terminalVelocity = null
+descendingGravityFactor = null
+shortHopAkaVariableJumpHeight = null
+coyoteTime = null
+jumpBuffering = null
+wallJump = null
+inputPauseAfterWallJump = null
+wallKickAngle = null
+wallSliding = null
+wallLatching = null
+wallLatchingModifer = null
+dashType = null
+dashes = null
+dashCancel = null
+dashLength = null
+cornerCutting = null
+correctionAmount = null
+crouch = null
+canRoll = null
+rollLength = null
+groundPound = null
+groundPoundPause = null
+upToCancel = null
 run = true
 jump = true
 idle = true
 walk = true
+slide = null
+latch = null
 falling = true
+crouch_idle = null
+crouch_walk = null
+roll = null
 
 [node name="Player Shape" type="CollisionShape2D" parent="." unique_id=1460789920]
 position = Vector2(0, -20)
@@ -168,15 +201,5 @@ position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_eiwrt")
 animation = &"run"
 
-[node name="MeleeHitbox" type="Area2D" parent="AnimatedSprite2D" unique_id=150762153]
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/MeleeHitbox" unique_id=1863636233]
-position = Vector2(23, 13)
-shape = SubResource("RectangleShape2D_ciydl")
-
 [node name="Muzzle" type="Marker2D" parent="." unique_id=925062913]
 position = Vector2(15, -25)
-
-[connection signal="area_entered" from="AnimatedSprite2D/MeleeHitbox" to="." method="_on_melee_hitbox_area_entered"]

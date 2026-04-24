@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c3ebq3li0q5nl"]
+
+[ext_resource type="Script" uid="uid://grpaa3ukgk4p" path="res://assets/scripts/melee_hitbox.gd" id="1_lh740"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yih1j"]
+
+[node name="melee_hitbox" type="Area2D" unique_id=311509413]
+script = ExtResource("1_lh740")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=110851550]
+shape = SubResource("RectangleShape2D_yih1j")
+
+[node name="Timer" type="Timer" parent="." unique_id=43607512]
+one_shot = true
+autostart = true

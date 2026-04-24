@@ -1,2 +1,7 @@
-res://assets/scenes/areas/enemy_death_effect.tscn
+res://assets/scripts/player_controller.gd
+res://assets/scenes/areas/enemy_test.tscn
 res://assets/scenes/areas/game.tscn
+res://assets/scenes/areas/player.tscn
+res://assets/scenes/areas/melee_hitbox.tscn
+res://assets/scripts/melee_hitbox.gd
+res://assets/scripts/melee_hitbox.tscn

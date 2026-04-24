@@ -116,6 +116,8 @@ class_name PlatformerController2D
 
 var fire_cadence = 0.25
 var fire_cooldown = 0.0
+var damage = 3
+
 
 var is_melee : bool 
 var bullet = preload("res://assets/scenes/areas/bullet.tscn")
@@ -136,14 +138,27 @@ func player_shooting(_delta):
 		print("shot")
 	elif is_melee == false and Input.is_action_just_pressed("attack"):
 		pass
-	
+
+func player_melee(_delta):
+	if is_melee == false and Input.is_action_just_pressed("attack"):
+		var meleeInstance = $melee_hitbox.instantiate() as Node2D
+		if wasPressingR == false:
+			meleeInstance.direction = -1
+		elif wasPressingR:
+			meleeInstance.direction = 1
+		meleeInstance.global_position = muzzle.global_position
+		get_parent().add_child(meleeInstance)
+		print("melee attack")
+	elif is_melee == false and Input.is_action_just_pressed("attack"):
+		pass
 func player_muzzle_position():
 	if wasPressingR:
 		muzzle.position.x = muzzlePosition.x
 	elif wasPressingR == false:
 		muzzle.position.x = -muzzlePosition.x
-	
-	
+
+
+
 
 #Variables determined by the developer set ones.
 var appliedGravity: float
@@ -213,6 +228,7 @@ func _ready():
 	anim = PlayerSprite
 	col = PlayerCollider
 	muzzlePosition = muzzle.position
+	
 	
 	_updateData()
 	
