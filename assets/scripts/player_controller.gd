@@ -121,6 +121,7 @@ var damage = 3
 
 var is_melee : bool 
 var bullet = preload("res://assets/scenes/areas/bullet.tscn")
+var melee_hitbox = preload("res://assets/scenes/areas/melee_hitbox.tscn")
 var muzzlePosition
 @onready var muzzle : Marker2D = $Muzzle
 
@@ -140,8 +141,9 @@ func player_shooting(_delta):
 		pass
 
 func player_melee(_delta):
+	print("melee func")
 	if is_melee == false and Input.is_action_just_pressed("attack"):
-		var meleeInstance = $melee_hitbox.instantiate() as Node2D
+		var meleeInstance = melee_hitbox.instantiate() as Node2D
 		if wasPressingR == false:
 			meleeInstance.direction = -1
 		elif wasPressingR:
