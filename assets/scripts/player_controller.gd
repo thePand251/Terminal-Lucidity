@@ -141,18 +141,15 @@ func player_shooting(_delta):
 		pass
 
 func player_melee(_delta):
-	print("melee func")
 	if is_melee == false and Input.is_action_just_pressed("attack"):
 		var meleeInstance = melee_hitbox.instantiate() as Node2D
-		if wasPressingR == false:
-			meleeInstance.direction = -1
-		elif wasPressingR:
-			meleeInstance.direction = 1
 		meleeInstance.global_position = muzzle.global_position
+		if wasMovingR:
+			meleeInstance.move_local_x(25)
+		elif wasMovingR == false:
+			meleeInstance.move_local_x(-25)
 		get_parent().add_child(meleeInstance)
 		print("melee attack")
-	elif is_melee == false and Input.is_action_just_pressed("attack"):
-		pass
 func player_muzzle_position():
 	if wasPressingR:
 		muzzle.position.x = muzzlePosition.x
@@ -188,6 +185,7 @@ var twoWayDashVertical
 var eightWayDash
 
 var wasMovingR: bool
+
 var wasPressingR: bool
 var movementInputMonitoring: Vector2 = Vector2(true, true) #movementInputMonitoring.x addresses right direction while .y addresses left direction
 
@@ -239,6 +237,8 @@ func _updateData():
 	deceleration = -maxSpeed / timeToReachZeroSpeed
 	jumpMagnitude = (10.0 * jumpHeight) * gravityScale
 	jumpCount = jumps
+	
+	
 	
 	dashMagnitude = maxSpeed * dashLength
 	dashCount = dashes
@@ -316,6 +316,8 @@ func _process(delta):
 		is_melee = !is_melee
 	
 	player_shooting(delta)
+	player_melee(delta)
+	
 	fire_cooldown -= delta
 	
 
