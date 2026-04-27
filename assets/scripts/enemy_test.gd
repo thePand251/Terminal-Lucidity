@@ -27,8 +27,8 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		health -= node.damage
 		print("Dummy health:", health)
 		
-		if health <= 0:
-			var enemy_death_effect_instance = deathEffect.instantiate() as Node2D
-			enemy_death_effect_instance.global_position = global_position
-			get_parent().add_child(enemy_death_effect_instance)
-			queue_free()
+	if health <= 0:
+		var enemy_death_effect_instance = deathEffect.instantiate() as Node2D
+		enemy_death_effect_instance.global_position = global_position
+		get_parent().add_child(enemy_death_effect_instance)
+		queue_free()

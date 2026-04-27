@@ -117,7 +117,8 @@ class_name PlatformerController2D
 var fire_cadence = 0.25
 var fire_cooldown = 0.0
 var damage = 3
-
+var attacking_ranged = false
+var attacking_melee = false
 
 var is_melee : bool 
 var bullet = preload("res://assets/scenes/areas/bullet.tscn")
@@ -128,6 +129,7 @@ var muzzlePosition
 func player_shooting(_delta):
 	if is_melee and Input.is_action_just_pressed("attack") and fire_cooldown <= 0:
 		fire_cooldown = fire_cadence
+		attacking_ranged = true
 		
 		var bulletInstance = bullet.instantiate() as Node2D
 		if wasPressingR == false:
@@ -137,8 +139,6 @@ func player_shooting(_delta):
 		bulletInstance.global_position = muzzle.global_position
 		get_parent().add_child(bulletInstance)
 		print("shot")
-	elif is_melee == false and Input.is_action_just_pressed("attack"):
-		pass
 
 func player_melee(_delta):
 	if is_melee == false and Input.is_action_just_pressed("attack"):
@@ -156,7 +156,9 @@ func player_muzzle_position():
 	elif wasPressingR == false:
 		muzzle.position.x = -muzzlePosition.x
 
-
+func _on_animated_sprite_2d_animation_finished() -> void:
+	attacking_melee = false
+	attacking_ranged = false
 
 
 #Variables determined by the developer set ones.
@@ -333,7 +335,11 @@ func _process(delta):
 			anim.play("run")
 		elif abs(velocity.x) < 0.1 and is_on_floor():
 			anim.speed_scale = 1
-			anim.play("idle")
+			if attacking_ranged == true:
+				anim.play("idle_ranged")
+			else:
+				anim.stop()
+				anim.play("idle")
 	elif run and idle and walk and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			anim.speed_scale = abs(velocity.x / 150)
