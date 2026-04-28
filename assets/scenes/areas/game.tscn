@@ -5,6 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://cbntir6d2sn0p" path="res://assets/scenes/areas/player.tscn" id="2_l3gui"]
 [ext_resource type="PackedScene" uid="uid://37iaqkwjexv6" path="res://assets/scenes/areas/enemy_test.tscn" id="3_l3gui"]
 [ext_resource type="Texture2D" uid="uid://5f8n8s1oisg2" path="res://assets/sprites/Pipe.platform.png" id="3_onuut"]
+[ext_resource type="Texture2D" uid="uid://b4scaatn8xfdi" path="res://assets/sprites/floor_1.png" id="4_fuxi7"]
+[ext_resource type="Texture2D" uid="uid://c2bchnqxj0agb" path="res://assets/sprites/floor_2.png" id="5_ce3qm"]
+[ext_resource type="Texture2D" uid="uid://bedjk52li586x" path="res://assets/sprites/floor_3.png" id="6_godsy"]
+[ext_resource type="Texture2D" uid="uid://cot15hw84ugge" path="res://assets/sprites/floor_end_left.png" id="7_q1ja5"]
+[ext_resource type="Texture2D" uid="uid://bsijr5tgcfyq6" path="res://assets/sprites/floor_end_right.png" id="8_xkibw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yqjtg"]
 
@@ -43,12 +48,63 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.9206085, -31.433552, 6.3349915, -31.532475, 6.495497, -11.051388, 32.45047, -11.15448, 32.45047, 13.180405, 7.225281, 13.477173, 6.82959, 31.579948, -5.931381, 31.579948)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xb0bh"]
+texture = ExtResource("4_fuxi7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6knr2"]
+texture = ExtResource("5_ce3qm")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oc5dw"]
+texture = ExtResource("6_godsy")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kk728"]
+texture = ExtResource("7_q1ja5")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vngcc"]
+texture = ExtResource("8_xkibw")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_iywne"]
+tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 sources/1 = SubResource("TileSetAtlasSource_onuut")
 sources/2 = SubResource("TileSetAtlasSource_o2f4k")
+sources/3 = SubResource("TileSetAtlasSource_xb0bh")
+sources/4 = SubResource("TileSetAtlasSource_6knr2")
+sources/5 = SubResource("TileSetAtlasSource_oc5dw")
+sources/6 = SubResource("TileSetAtlasSource_kk728")
+sources/7 = SubResource("TileSetAtlasSource_vngcc")
 
 [node name="Area1" type="Node2D" unique_id=1154078562]
 
@@ -61,7 +117,7 @@ texture = SubResource("CompressedTexture2D_yqjtg")
 texture_filter = 1
 tile_set = SubResource("TileSet_iywne")
 format = 2
-layer_0/tile_data = PackedInt32Array(327699, 1, 0, 327695, 1, 0, 327691, 1, 0, -65532, 1, 0, -65536, 1, 0, 327687, 1, 0, 327683, 1, 0, 393215, 1, 0, 393211, 1, 0, 393207, 1, 0, 393203, 1, 0, 131084, 1, 0, 393199, 1, 0, 393195, 1, 0)
+layer_0/tile_data = PackedInt32Array(262143, 3, 0, 196609, 3, 0, 196611, 3, 0, 196615, 3, 0, 196616, 3, 0, 196608, 4, 0, 196612, 4, 0, 196614, 4, 0, 196617, 4, 0, 196610, 5, 0, 262142, 5, 0, 196613, 5, 0, 196618, 5, 0, 196619, 6, 0, 262141, 7, 0, 65539, 7, 0, 65543, 6, 0, 65542, 5, 0, 65540, 5, 0, 65541, 5, 0)
 
 [node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=1283717884]
 texture_filter = 1
