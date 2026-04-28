@@ -114,17 +114,9 @@ class_name PlatformerController2D
 ##Animations must be named "roll" all lowercase as the check box says
 @export var roll: bool
 
-var fire_cadence = 0.25
-var fire_cooldown = 0.0
-var damage = 3
-var attacking_ranged = false
-var attacking_melee = false
-
-var is_melee : bool 
-var bullet = preload("res://assets/scenes/areas/bullet.tscn")
-var melee_hitbox = preload("res://assets/scenes/areas/melee_hitbox.tscn")
-var muzzlePosition
 @onready var muzzle : Marker2D = $Muzzle
+
+#Attacking Mechanics
 
 func player_shooting(_delta):
 	if is_melee and Input.is_action_just_pressed("attack") and fire_cooldown <= 0:
@@ -142,6 +134,7 @@ func player_shooting(_delta):
 
 func player_melee(_delta):
 	if is_melee == false and Input.is_action_just_pressed("attack"):
+		attacking_melee = true
 		var meleeInstance = melee_hitbox.instantiate() as Node2D
 		meleeInstance.global_position = muzzle.global_position
 		if wasMovingR:
@@ -159,9 +152,18 @@ func player_muzzle_position():
 func _on_animated_sprite_2d_animation_finished() -> void:
 	attacking_melee = false
 	attacking_ranged = false
-
-
+	
 #Variables determined by the developer set ones.
+var fire_cadence = 0.25
+var fire_cooldown = 0.0
+var damage = 3
+var attacking_ranged = false
+var attacking_melee = false
+var is_melee : bool 
+var bullet = preload("res://assets/scenes/areas/bullet.tscn")
+var melee_hitbox = preload("res://assets/scenes/areas/melee_hitbox.tscn")
+var muzzlePosition
+
 var appliedGravity: float
 var maxSpeedLock: float
 var appliedTerminalVelocity: float
@@ -307,7 +309,7 @@ func _process(delta):
 		latched = false
 		wasLatched = true
 		_setLatch(0.2, false)
-
+		#switch attack mode
 	if Input.is_action_just_pressed("switchMode"):
 		if is_melee:
 			print("melee")
@@ -316,6 +318,8 @@ func _process(delta):
 			print("ranged")
 			print("is_melee is ",is_melee)
 		is_melee = !is_melee
+		attacking_melee = false
+		attacking_ranged = false
 	
 	player_shooting(delta)
 	player_melee(delta)
@@ -332,13 +336,23 @@ func _process(delta):
 	if run and idle and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			anim.speed_scale = abs(velocity.x / 150)
-			anim.play("run")
+			if attacking_ranged == true and run:
+				anim.play("run_ranged")
+				print("run ranged anim attack")
+			elif attacking_melee == true and run:
+				anim.play("run_melee")
+				print("run melee anim attack")
+			else:
+				anim.play("run")
 		elif abs(velocity.x) < 0.1 and is_on_floor():
 			anim.speed_scale = 1
-			if attacking_ranged == true:
+			if attacking_ranged == true and idle:
 				anim.play("idle_ranged")
+				print("idle ranged anim attack")
+			elif attacking_melee == true and idle:
+				anim.play("idle_melee")
+				print("idle melee anim attack")
 			else:
-				anim.stop()
 				anim.play("idle")
 	elif run and idle and walk and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
