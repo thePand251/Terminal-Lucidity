@@ -338,20 +338,20 @@ func _process(delta):
 			anim.speed_scale = abs(velocity.x / 150)
 			if attacking_ranged == true and run:
 				anim.play("run_ranged")
-				print("run ranged anim attack")
+				
 			elif attacking_melee == true and run:
 				anim.play("run_melee")
-				print("run melee anim attack")
+				
 			else:
 				anim.play("run")
 		elif abs(velocity.x) < 0.1 and is_on_floor():
 			anim.speed_scale = 1
 			if attacking_ranged == true and idle:
 				anim.play("idle_ranged")
-				print("idle ranged anim attack")
+				
 			elif attacking_melee == true and idle:
 				anim.play("idle_melee")
-				print("idle melee anim attack")
+				
 			else:
 				anim.play("idle")
 	elif run and idle and walk and !dashing and !crouching:
@@ -369,10 +369,14 @@ func _process(delta):
 	if velocity.y < 0 and jump and !dashing:
 		anim.speed_scale = 1
 		anim.play("jump")
+		attacking_melee = false
+		attacking_ranged = false
 		
 	if velocity.y > 40 and falling and !dashing and !crouching:
 		anim.speed_scale = 1
 		anim.play("falling")
+		attacking_melee = false
+		attacking_ranged = false
 		
 	if latch and slide:
 		#wall slide and latch

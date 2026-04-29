@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsijr5tgcfyq6"
-path="res://.godot/imported/floor_end_right.png-d496d32988b263d44ca0a0ec4b94fefc.ctex"
+uid="uid://bn0f2jf03wr00"
+path="res://.godot/imported/TEMP_background.png-9f23592cd95f82cadda53bfacbca4762.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/floor_end_right.png"
-dest_files=["res://.godot/imported/floor_end_right.png-d496d32988b263d44ca0a0ec4b94fefc.ctex"]
+source_file="res://assets/sprites/TEMP_background.png"
+dest_files=["res://.godot/imported/TEMP_background.png-9f23592cd95f82cadda53bfacbca4762.ctex"]
 
 [params]
 

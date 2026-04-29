@@ -1,3 +1,5 @@
+Sprite2D
+ParallaxBackground
 CollisionShape2D
 Area2D
 Timer
@@ -7,7 +9,6 @@ CharacterBody2D
 Marker2D
 TileMap
 Camera2D
-Sprite2D
 AnimationPlayer
 Camera2D
 CollisionPolygon2D
