@@ -121,7 +121,8 @@ class_name PlatformerController2D
 func player_shooting(_delta):
 	if is_melee and Input.is_action_just_pressed("attack") and fire_cooldown <= 0:
 		fire_cooldown = fire_cadence
-		attacking_ranged = true
+		att_idle_r = true
+		att_run_r = true
 		
 		var bulletInstance = bullet.instantiate() as Node2D
 		if wasPressingR == false:
@@ -134,7 +135,8 @@ func player_shooting(_delta):
 
 func player_melee(_delta):
 	if is_melee == false and Input.is_action_just_pressed("attack"):
-		attacking_melee = true
+		att_idle_m = true
+		att_run_m = true
 		var meleeInstance = melee_hitbox.instantiate() as Node2D
 		meleeInstance.global_position = muzzle.global_position
 		if wasMovingR:
@@ -150,15 +152,17 @@ func player_muzzle_position():
 		muzzle.position.x = -muzzlePosition.x
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-	attacking_melee = false
-	attacking_ranged = false
+	att_idle_r = false
+	att_idle_m = false
 	
 #Variables determined by the developer set ones.
 var fire_cadence = 0.25
 var fire_cooldown = 0.0
 var damage = 3
-var attacking_ranged = false
-var attacking_melee = false
+var att_idle_r = false
+var att_idle_m = false
+var att_run_r = false
+var att_run_m = false
 var is_melee : bool 
 var bullet = preload("res://assets/scenes/areas/bullet.tscn")
 var melee_hitbox = preload("res://assets/scenes/areas/melee_hitbox.tscn")
@@ -318,8 +322,8 @@ func _process(delta):
 			print("ranged")
 			print("is_melee is ",is_melee)
 		is_melee = !is_melee
-		attacking_melee = false
-		attacking_ranged = false
+		att_idle_m = false
+		att_idle_r = false
 	
 	player_shooting(delta)
 	player_melee(delta)
@@ -336,24 +340,35 @@ func _process(delta):
 	if run and idle and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			anim.speed_scale = abs(velocity.x / 150)
-			if attacking_ranged == true and run:
+			if att_run_r == true and run:
 				anim.play("run_ranged")
+				print("played")
+				att_idle_r = false
 				
-			elif attacking_melee == true and run:
+			elif att_run_m == true and run:
 				anim.play("run_melee")
+				print("played 2")
+				att_idle_m = false
 				
 			else:
 				anim.play("run")
+				att_idle_m = false
+				att_idle_r = false
+				
+				
 		elif abs(velocity.x) < 0.1 and is_on_floor():
 			anim.speed_scale = 1
-			if attacking_ranged == true and idle:
+			if att_idle_r == true and idle:
 				anim.play("idle_ranged")
 				
-			elif attacking_melee == true and idle:
+			elif att_idle_m == true and idle:
 				anim.play("idle_melee")
 				
 			else:
 				anim.play("idle")
+				att_run_m = false
+				att_run_r = false
+
 	elif run and idle and walk and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			anim.speed_scale = abs(velocity.x / 150)
@@ -369,14 +384,18 @@ func _process(delta):
 	if velocity.y < 0 and jump and !dashing:
 		anim.speed_scale = 1
 		anim.play("jump")
-		attacking_melee = false
-		attacking_ranged = false
+		att_idle_m = false
+		att_idle_r = false
+		att_run_m = false
+		att_run_r = false
 		
 	if velocity.y > 40 and falling and !dashing and !crouching:
 		anim.speed_scale = 1
 		anim.play("falling")
-		attacking_melee = false
-		attacking_ranged = false
+		att_idle_m = false
+		att_idle_r = false
+		att_run_m = false
+		att_run_r = false
 		
 	if latch and slide:
 		#wall slide and latch

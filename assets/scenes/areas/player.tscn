@@ -193,7 +193,7 @@ zoom = Vector2(3.5, 3.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1201258973]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_eiwrt")
-animation = &"idle_melee"
+animation = &"run_ranged"
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=925062913]
 position = Vector2(15, -25)
