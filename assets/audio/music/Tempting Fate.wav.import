@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bwl50wmy3edhq"
-path="res://.godot/imported/Tempting Fate.wav-598692a938c78d7551760dad55377d24.sample"
+path="res://.godot/imported/Tempting Fate.wav-fc248448b5b85f6c3a6aca128971e8e7.sample"
 
 [deps]
 
-source_file="res://assets/sounds/music/Tempting Fate.wav"
-dest_files=["res://.godot/imported/Tempting Fate.wav-598692a938c78d7551760dad55377d24.sample"]
+source_file="res://assets/audio/music/Tempting Fate.wav"
+dest_files=["res://.godot/imported/Tempting Fate.wav-fc248448b5b85f6c3a6aca128971e8e7.sample"]
 
 [params]
 
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=2

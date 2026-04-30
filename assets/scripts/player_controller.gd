@@ -115,7 +115,8 @@ class_name PlatformerController2D
 @export var roll: bool
 
 @onready var muzzle : Marker2D = $Muzzle
-
+var melee_attack_sfx = preload("res://assets/audio/sfx/melee.wav")
+var ranged_attack_sfx = preload("res://assets/audio/sfx/shoot.wav")
 #Attacking Mechanics
 
 func player_shooting(_delta):
@@ -131,6 +132,7 @@ func player_shooting(_delta):
 			bulletInstance.direction = 1
 		bulletInstance.global_position = muzzle.global_position
 		get_parent().add_child(bulletInstance)
+		ranged_attack_sfx.play_ranged_attack()
 		print("shot")
 
 func player_melee(_delta):
@@ -144,6 +146,7 @@ func player_melee(_delta):
 		elif wasMovingR == false:
 			meleeInstance.move_local_x(-25)
 		get_parent().add_child(meleeInstance)
+		$Melee_attack.play()
 		print("melee attack")
 func player_muzzle_position():
 	if wasPressingR:
@@ -356,6 +359,7 @@ func _process(delta):
 				anim.play("run")
 				att_idle_m = false
 				att_idle_r = false
+			
 				
 				
 		elif abs(velocity.x) < 0.1 and is_on_floor():
@@ -370,6 +374,7 @@ func _process(delta):
 				anim.play("idle")
 				att_run_m = false
 				att_run_r = false
+			
 
 	elif run and idle and walk and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():

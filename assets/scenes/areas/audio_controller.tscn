@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bhr33suevlsj2"]
+
+[ext_resource type="Script" uid="uid://ftcrh64w0ydj" path="res://assets/scripts/audio_controller.gd" id="1_88ai5"]
+[ext_resource type="AudioStream" uid="uid://g7gnjnqgnh1w" path="res://assets/audio/music/Conduction.wav" id="2_msv53"]
+[ext_resource type="AudioStream" uid="uid://blwslqxm2x1bt" path="res://assets/audio/sfx/footsteps.wav" id="3_67kbt"]
+[ext_resource type="AudioStream" uid="uid://j1ncsbswc51d" path="res://assets/audio/sfx/shoot.wav" id="4_so0dn"]
+[ext_resource type="AudioStream" uid="uid://cb6v2jlnwgc6d" path="res://assets/audio/sfx/melee_hit.wav" id="5_p54bd"]
+[ext_resource type="AudioStream" uid="uid://cdyqmixbv17vb" path="res://assets/audio/sfx/shot_hit.wav" id="6_aqfyk"]
+[ext_resource type="AudioStream" uid="uid://b8pmqg1ie8sjv" path="res://assets/audio/sfx/melee.wav" id="7_0u1v4"]
+[ext_resource type="AudioStream" uid="uid://bwl50wmy3edhq" path="res://assets/audio/music/Tempting Fate.wav" id="8_j1r2d"]
+
+[node name="audio_controller" type="Node2D" unique_id=544440492]
+script = ExtResource("1_88ai5")
+
+[node name="Music_theme" type="AudioStreamPlayer2D" parent="." unique_id=256092598]
+stream = ExtResource("2_msv53")
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=1539279623]
+stream = ExtResource("3_67kbt")
+
+[node name="Ranged_attack" type="AudioStreamPlayer2D" parent="." unique_id=315412185]
+stream = ExtResource("4_so0dn")
+
+[node name="Melee_hit" type="AudioStreamPlayer2D" parent="." unique_id=419600213]
+stream = ExtResource("5_p54bd")
+
+[node name="Ranged_hit" type="AudioStreamPlayer2D" parent="." unique_id=1369910696]
+stream = ExtResource("6_aqfyk")
+
+[node name="Melee_attack" type="AudioStreamPlayer2D" parent="." unique_id=2027373462]
+stream = ExtResource("7_0u1v4")
+
+[node name="Music_boss" type="AudioStreamPlayer2D" parent="." unique_id=1619963122]
+stream = ExtResource("8_j1r2d")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
