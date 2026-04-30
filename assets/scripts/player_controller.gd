@@ -117,8 +117,11 @@ class_name PlatformerController2D
 @onready var muzzle : Marker2D = $Muzzle
 var melee_attack_sfx = preload("res://assets/audio/sfx/melee.wav")
 var ranged_attack_sfx = preload("res://assets/audio/sfx/shoot.wav")
-#Attacking Mechanics
 
+#Music/SFX
+@onready var sfx_footsteps: AudioStreamPlayer = $sfx_footsteps
+
+#Attacking Mechanics
 func player_shooting(_delta):
 	if is_melee and Input.is_action_just_pressed("attack") and fire_cooldown <= 0:
 		fire_cooldown = fire_cadence
@@ -132,7 +135,7 @@ func player_shooting(_delta):
 			bulletInstance.direction = 1
 		bulletInstance.global_position = muzzle.global_position
 		get_parent().add_child(bulletInstance)
-		ranged_attack_sfx.play_ranged_attack()
+		#ranged_attack_sfx.play_ranged_attack()
 		print("shot")
 
 func player_melee(_delta):
@@ -146,7 +149,7 @@ func player_melee(_delta):
 		elif wasMovingR == false:
 			meleeInstance.move_local_x(-25)
 		get_parent().add_child(meleeInstance)
-		$Melee_attack.play()
+		# Melee_attack.play()
 		print("melee attack")
 func player_muzzle_position():
 	if wasPressingR:
@@ -345,6 +348,8 @@ func _process(delta):
 	if run and idle and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			anim.speed_scale = abs(velocity.x / 150)
+			sfx_footsteps.play()
+				
 			if att_run_r == true and run:
 				anim.play("run_ranged")
 				
@@ -378,11 +383,15 @@ func _process(delta):
 
 	elif run and idle and walk and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
+			print("test1")
 			anim.speed_scale = abs(velocity.x / 150)
 			if abs(velocity.x) < (maxSpeedLock):
 				anim.play("walk")
+				print("test2")
+				sfx_footsteps.play()
 			else:
 				anim.play("run")
+				print("test3")
 		elif abs(velocity.x) < 0.1 and is_on_floor():
 			anim.speed_scale = 1
 			anim.play("idle")

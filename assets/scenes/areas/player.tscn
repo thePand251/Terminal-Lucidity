@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cuanattouopgk" path="res://assets/scripts/player_controller.gd" id="1_ciydl"]
 [ext_resource type="Texture2D" uid="uid://c3r0lf5hea682" path="res://assets/sprites/playerAnimations.png" id="2_eqpql"]
+[ext_resource type="AudioStream" uid="uid://blwslqxm2x1bt" path="res://assets/audio/sfx/footsteps.wav" id="3_eqpql"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 height = 40.0
@@ -202,5 +203,8 @@ animation = &"run_melee"
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=925062913]
 position = Vector2(15, -25)
+
+[node name="sfx_footsteps" type="AudioStreamPlayer" parent="." unique_id=420339280]
+stream = ExtResource("3_eqpql")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,3 +1,4 @@
+AudioStreamPlayer
 AudioStreamPlayer2D
 Parallax2D
 Sprite2D
@@ -10,6 +11,4 @@ Node2D
 CharacterBody2D
 Marker2D
 TileMap
-Camera2D
-AnimationPlayer
 Camera2D
