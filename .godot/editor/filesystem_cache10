@@ -1,16 +1,16 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777492279
+::res://::1777580795
 README.md::TextFile::-1::1775515155::0::1::::<><><>0<>0<><>::
 ::res://assets/::1777416374
 ::res://assets/audio/::1777416374
 Conduction.mp3::AudioStreamMP3::6538464721624848830::1777416374::1777416374::1::::<><><>0<>0<>cd4d5a02fb29068407a1ae67a6f9c131<>res://.godot/imported/Conduction.mp3-7f56794b0d577ce021a68df8bdca5e1e.mp3str::
 ::res://assets/scenes/::1777416374
-::res://assets/scenes/areas/::1777494623
+::res://assets/scenes/areas/::1777495683
 bullet.tscn::PackedScene::7984085185586620425::1777416374::0::1::::<><><>0<>0<><>::uid://bcibgvsjdtoom::::res://assets/sprites/TEMP_bullet.png<>uid://cqmst0tck8goc::::res://assets/scripts/bullet.gd
 bullet_impact.tscn::PackedScene::7426102352085790001::1777416374::0::1::::<><><>0<>0<><>::uid://dfnmhgtt4v8io::::res://assets/sprites/TEMP_bulletImpact.png<>uid://rcxxohaosoyb::::res://assets/scripts/bullet_impact.gd
 enemy_death_effect.tscn::PackedScene::4775774103868203578::1777416374::0::1::::<><><>0<>0<><>::uid://b0kfw5uitbbgu::::res://assets/sprites/TEMP_deatheffect.png<>uid://obbka2nf5fh3::::res://assets/scripts/enemy_death_effect.gd
 enemy_test.tscn::PackedScene::2031834302770388661::1777493868::0::1::::<><><>0<>0<><>::uid://sqiu6bubad3p::::res://assets/scripts/enemy_test.gd<>uid://dqim7ysg3sljm::::res://assets/sprites/Opticpus.art.png
-game.tscn::PackedScene::6739082860442276150::1777493928::0::1::::<><><>0<>0<><>::uid://bpa5qyqunk8c3::::res://assets/sprites/TEMP_floortile.png<>uid://cbntir6d2sn0p::::res://assets/scenes/areas/player.tscn<>uid://b2bsuic4a0mam::::res://assets/sprites/Wall_Tile.2.Window.png<>uid://b2cvi31j4tm2g::::res://assets/sprites/Wall_1 (1).png<>uid://37iaqkwjexv6::::res://assets/scenes/areas/enemy_test.tscn<>uid://x4sx25u1x61p::::res://assets/sprites/floor_tileset.png<>uid://5f8n8s1oisg2::::res://assets/sprites/Pipe.platform.png<>uid://e8euppumncyu::::res://assets/sprites/Wall_Tile.1.Pipes.png<>uid://gmmhkekd5cvs::::res://assets/sprites/Wall_window.png
+game.tscn::PackedScene::6739082860442276150::1777495683::0::1::::<><><>0<>0<><>::uid://bpa5qyqunk8c3::::res://assets/sprites/TEMP_floortile.png<>uid://cbntir6d2sn0p::::res://assets/scenes/areas/player.tscn<>uid://b2bsuic4a0mam::::res://assets/sprites/Wall_Tile.2.Window.png<>uid://b2cvi31j4tm2g::::res://assets/sprites/Wall_1 (1).png<>uid://37iaqkwjexv6::::res://assets/scenes/areas/enemy_test.tscn<>uid://x4sx25u1x61p::::res://assets/sprites/floor_tileset.png<>uid://5f8n8s1oisg2::::res://assets/sprites/Pipe.platform.png<>uid://e8euppumncyu::::res://assets/sprites/Wall_Tile.1.Pipes.png<>uid://gmmhkekd5cvs::::res://assets/sprites/Wall_window.png
 melee_hitbox.tscn::PackedScene::6746477278006801165::1777416374::0::1::::<><><>0<>0<><>::uid://grpaa3ukgk4p::::res://assets/scripts/melee_hitbox.gd
 player.tscn::PackedScene::4871035971999813621::1777494623::0::1::::<><><>0<>0<><>::uid://cuanattouopgk::::res://assets/scripts/player_controller.gd<>uid://dyhgsxvj4t58q::::res://assets/sprites/playerAnimations.png<>uid://b0kfw5uitbbgu::::res://assets/sprites/TEMP_deatheffect.png<>uid://bdnwxuy7s3r5q::::res://assets/sprites/TEMP_dummy.png
 ::res://assets/scripts/::1777494321
