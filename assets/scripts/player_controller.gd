@@ -154,6 +154,8 @@ func player_muzzle_position():
 func _on_animated_sprite_2d_animation_finished() -> void:
 	att_idle_r = false
 	att_idle_m = false
+	att_run_r = false
+	att_run_m = false
 	
 #Variables determined by the developer set ones.
 var fire_cadence = 0.25
@@ -342,12 +344,12 @@ func _process(delta):
 			anim.speed_scale = abs(velocity.x / 150)
 			if att_run_r == true and run:
 				anim.play("run_ranged")
-				print("played")
+				
 				att_idle_r = false
 				
 			elif att_run_m == true and run:
 				anim.play("run_melee")
-				print("played 2")
+				
 				att_idle_m = false
 				
 			else:

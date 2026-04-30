@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cbntir6d2sn0p"]
 
 [ext_resource type="Script" uid="uid://cuanattouopgk" path="res://assets/scripts/player_controller.gd" id="1_ciydl"]
-[ext_resource type="Texture2D" uid="uid://dyhgsxvj4t58q" path="res://assets/sprites/playerAnimations.png" id="2_eqpql"]
-[ext_resource type="Texture2D" uid="uid://b0kfw5uitbbgu" path="res://assets/sprites/TEMP_deatheffect.png" id="3_eqpql"]
-[ext_resource type="Texture2D" uid="uid://bdnwxuy7s3r5q" path="res://assets/sprites/TEMP_dummy.png" id="4_84f3e"]
+[ext_resource type="Texture2D" uid="uid://c3r0lf5hea682" path="res://assets/sprites/playerAnimations.png" id="2_eqpql"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 height = 40.0
@@ -56,25 +54,29 @@ region = Rect2(128, 128, 64, 64)
 atlas = ExtResource("2_eqpql")
 region = Rect2(192, 128, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_eiwrt"]
+atlas = ExtResource("2_eqpql")
+region = Rect2(0, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_megxa"]
+atlas = ExtResource("2_eqpql")
+region = Rect2(64, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp118"]
+atlas = ExtResource("2_eqpql")
+region = Rect2(0, 320, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gerli"]
-atlas = ExtResource("4_84f3e")
-region = Rect2(0, 0, 32, 32)
+atlas = ExtResource("2_eqpql")
+region = Rect2(64, 320, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6lvt"]
-atlas = ExtResource("4_84f3e")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("2_eqpql")
+region = Rect2(128, 320, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptqye"]
-atlas = ExtResource("4_84f3e")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7p4s7"]
-atlas = ExtResource("4_84f3e")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eiwrt"]
-atlas = ExtResource("3_eqpql")
-region = Rect2(0, 0, 32, 32)
+atlas = ExtResource("2_eqpql")
+region = Rect2(192, 320, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eiwrt"]
 animations = [{
@@ -146,6 +148,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_eiwrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_megxa")
+}],
+"loop": false,
+"name": &"run_melee",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp118")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_gerli")
 }, {
 "duration": 1.0,
@@ -153,21 +169,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ptqye")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7p4s7")
 }],
 "loop": false,
-"name": &"run_melee",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eiwrt")
-}],
-"loop": true,
 "name": &"run_ranged",
-"speed": 12.0
+"speed": 7.0
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=2136678792 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider")]
@@ -193,7 +198,7 @@ zoom = Vector2(3.5, 3.5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1201258973]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_eiwrt")
-animation = &"run_ranged"
+animation = &"run_melee"
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=925062913]
 position = Vector2(15, -25)
