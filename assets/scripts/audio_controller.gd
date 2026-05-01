@@ -29,4 +29,5 @@ func play_ranged_attack():
 
 func play_footsteps():
 	if not mute:
-		$Footsteps.play()
+		#$Footsteps.play()
+		pass

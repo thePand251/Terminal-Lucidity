@@ -115,6 +115,8 @@ class_name PlatformerController2D
 @export var roll: bool
 
 @onready var muzzle : Marker2D = $Muzzle
+@onready var death_zone : Area2D = $death_zone
+@onready var spawnpoint : Node2D = $Spawnpoint
 
 #Music/SFX
 @onready var ac = $audio_controller
@@ -161,7 +163,19 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	att_run_r = false
 	att_run_m = false
 	
-#Variables determined by the developer set ones.
+func take_damage() -> void:
+	print("DEAD")
+	visible = false
+	can_control = false
+	
+	await get_tree().create_timer(1).timeout
+	reset_player()
+	
+func reset_player() -> void:
+	global_position = spawnpoint.global_position
+	visible = true
+	can_control = true
+# variable declerations
 var fire_cadence = 0.25
 var fire_cooldown = 0.0
 var damage = 3
@@ -174,7 +188,9 @@ var bullet = preload("res://assets/scenes/areas/bullet.tscn")
 var melee_hitbox = preload("res://assets/scenes/areas/melee_hitbox.tscn")
 var muzzlePosition
 var footmute = true
+var can_control : bool = true
 
+#Variables determined by the developer set ones.
 var appliedGravity: float
 var maxSpeedLock: float
 var appliedTerminalVelocity: float
@@ -351,9 +367,9 @@ func _process(delta):
 			var vol = -80
 			
 			if not footmute:
-				print("not muted")
+				
 				vol = 0
-			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Footsteps"), vol)
+			#AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Footsteps"), vol)
 			
 			if att_run_r == true and run:
 				anim.play("run_ranged")
@@ -446,6 +462,7 @@ func _process(delta):
 		
 
 func _physics_process(delta):
+	if not can_control: return
 	if !dset:
 		gdelta = delta
 		dset = true

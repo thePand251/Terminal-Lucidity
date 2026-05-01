@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c7j52iepj2ppf"]
+
+[ext_resource type="Script" uid="uid://nu4kl20mhqb8" path="res://assets/scripts/death_zone.gd" id="1_3ytrd"]
+
+[node name="death_zone" type="Area2D" unique_id=1383827248]
+position = Vector2(1, -1)
+scale = Vector2(60, 60)
+script = ExtResource("1_3ytrd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

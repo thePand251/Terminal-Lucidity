@@ -33,6 +33,7 @@ script = ExtResource("1_iax8c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=837785587]
 sprite_frames = SubResource("SpriteFrames_qkn5u")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139088977]
 position = Vector2(-2, 9)
