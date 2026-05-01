@@ -115,11 +115,9 @@ class_name PlatformerController2D
 @export var roll: bool
 
 @onready var muzzle : Marker2D = $Muzzle
-var melee_attack_sfx = preload("res://assets/audio/sfx/melee.wav")
-var ranged_attack_sfx = preload("res://assets/audio/sfx/shoot.wav")
-@onready var ac = $audio_controller
-#Music/SFX
 
+#Music/SFX
+@onready var ac = $audio_controller
 
 #Attacking Mechanics
 func player_shooting(_delta):
@@ -135,7 +133,7 @@ func player_shooting(_delta):
 			bulletInstance.direction = 1
 		bulletInstance.global_position = muzzle.global_position
 		get_parent().add_child(bulletInstance)
-		#ranged_attack_sfx.play_ranged_attack()
+		ac.play_ranged_attack()
 		print("shot")
 
 func player_melee(_delta):
@@ -175,6 +173,7 @@ var is_melee : bool
 var bullet = preload("res://assets/scenes/areas/bullet.tscn")
 var melee_hitbox = preload("res://assets/scenes/areas/melee_hitbox.tscn")
 var muzzlePosition
+var footmute = true
 
 var appliedGravity: float
 var maxSpeedLock: float
@@ -348,27 +347,31 @@ func _process(delta):
 	if run and idle and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			anim.speed_scale = abs(velocity.x / 150)
+			footmute = false
+			var vol = -80
 			
-				
+			if not footmute:
+				print("not muted")
+				vol = 0
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Footsteps"), vol)
+			
 			if att_run_r == true and run:
 				anim.play("run_ranged")
-				
 				att_idle_r = false
 				
 			elif att_run_m == true and run:
 				anim.play("run_melee")
-				
 				att_idle_m = false
 				
 			else:
 				anim.play("run")
 				att_idle_m = false
 				att_idle_r = false
-			
-				
-				
+
 		elif abs(velocity.x) < 0.1 and is_on_floor():
 			anim.speed_scale = 1
+			footmute = true
+			
 			if att_idle_r == true and idle:
 				anim.play("idle_ranged")
 				
@@ -380,7 +383,6 @@ func _process(delta):
 				att_run_m = false
 				att_run_r = false
 			
-
 	elif run and idle and walk and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			print("test1")

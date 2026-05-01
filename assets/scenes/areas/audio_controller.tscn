@@ -17,6 +17,7 @@ stream = ExtResource("2_msv53")
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=1539279623]
 stream = ExtResource("3_67kbt")
+bus = &"Footsteps"
 
 [node name="Ranged_attack" type="AudioStreamPlayer2D" parent="." unique_id=315412185]
 stream = ExtResource("4_so0dn")

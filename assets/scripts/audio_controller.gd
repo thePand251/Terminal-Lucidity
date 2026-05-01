@@ -5,6 +5,7 @@ extends Node2D
 func _on_ready() -> void:
 	if not mute:
 		play_music()
+		
 
 func play_music():
 	if not mute:

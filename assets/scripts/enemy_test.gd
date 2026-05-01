@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var deathEffect = preload("res://assets/scenes/areas/enemy_death_effect.tscn")
-
+@onready var ac = $audio_controller
 var health : int = 3
 
 const gravity = 1000
@@ -23,11 +23,13 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		var node = area.get_parent() as Node
 		health -= node.damage
 		print("Dummy health:", health)
+		ac.play_ranged_hit()
 		
 	elif area.has_method("get_damage_amount"):
 		var node = area as Node
 		health -= node.damage
 		print("Dummy health:", health)
+		ac.play_melee_hit()
 		
 	
 		
