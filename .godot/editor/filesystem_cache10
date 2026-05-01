@@ -1,86 +1,86 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777591888
-README.md::TextFile::-1::1777591095::0::1::::<><><>0<>0<><>::
-::res://art/::1777590271
-::res://art/Background Art/::1777590271
-::res://art/Character Art/::1777590476
-Melee.Moving.png::CompressedTexture2D::6216085230779079195::1777590271::1777590476::1::::<><><>0<>0<>42ccfb3d24ac942170e79312ec568cce<>res://.godot/imported/Melee.Moving.png-9a1231601d9da06ccf598fd31f196316.ctex::
-Monster Hunter Character Art - 1.FALL.OUTLINED (1).png::CompressedTexture2D::4675414810471303819::1777590271::1777590476::1::::<><><>0<>0<>cead1ef81fa7528bd96d139e45b1d3b0<>res://.godot/imported/Monster Hunter Character Art - 1.FALL.OUTLINED (1).png-284ea0bf458f0d0ea10cf1f464071531.ctex::
-Monster Hunter Character Art - 1.IDLE (1).png::CompressedTexture2D::5904917310603220532::1777590271::1777590476::1::::<><><>0<>0<>ac16e80809f578af4044aa36aa67ba7a<>res://.godot/imported/Monster Hunter Character Art - 1.IDLE (1).png-cb57cc469b146a82c4e458807d21677c.ctex::
-Monster Hunter Character Art - 1.IDLE.OUTLINED.png::CompressedTexture2D::5759604980108133648::1777590271::1777590476::1::::<><><>0<>0<>ca28a9ef32270a06df15026decd85c63<>res://.godot/imported/Monster Hunter Character Art - 1.IDLE.OUTLINED.png-6c1a10c7b1e095b085a678a4b6d7c819.ctex::
-Monster Hunter Character Art - 1.JUMP.OUTLINED.png::CompressedTexture2D::1385101825655426556::1777590271::1777590476::1::::<><><>0<>0<>4d265e10d4d097340d4fefa6639acd65<>res://.godot/imported/Monster Hunter Character Art - 1.JUMP.OUTLINED.png-8de9093beef952a1d9e125c90859311b.ctex::
-Monster Hunter Character Art - 1.melee.attack.png::CompressedTexture2D::4113278081156902178::1777590271::1777590476::1::::<><><>0<>0<>8c5ac615969b534f159ffc5ce081ab07<>res://.godot/imported/Monster Hunter Character Art - 1.melee.attack.png-bf4063cc15454d8479fb6ee3e53ad1e4.ctex::
-Monster Hunter Character Art - Ranged.attack.Spritesheet.png::CompressedTexture2D::4976446107984983022::1777590271::1777590476::1::::<><><>0<>0<>75a4dcbf9e74f8b27d2db3b17d05e597<>res://.godot/imported/Monster Hunter Character Art - Ranged.attack.Spritesheet.png-5e4c7c140d943a19a82a645e998a783e.ctex::
-Monster Hunter Character Art.WalkingAnimation.WIP.png::CompressedTexture2D::5805358893351665137::1777590271::1777590476::1::::<><><>0<>0<>72183b55f1a166a9b60167c82370637f<>res://.godot/imported/Monster Hunter Character Art.WalkingAnimation.WIP.png-e27322baea9c09564d1122c7c3c0d982.ctex::
-playerAnimations.png::CompressedTexture2D::8270857853295278830::1777590271::1777590476::1::::<><><>0<>0<>4cbae840ab96133bd8fdd18910db21a7<>res://.godot/imported/playerAnimations.png-1b1708435175b821f8390f75a2af8682.ctex::
-Ranged.Moving.png::CompressedTexture2D::2309435878791790423::1777590271::1777590476::1::::<><><>0<>0<>f96ca80e4bf78bb3d506b19e51d441b5<>res://.godot/imported/Ranged.Moving.png-fb8ce686a2ae1c31ebe88a4a1f8edd88.ctex::
-::res://art/Effects/::1777590476
-Explosion.animation.impact.png::CompressedTexture2D::7504699460277438000::1777590271::1777590476::1::::<><><>0<>0<>e2b50b4c9dd221cbec705e4dcd36473e<>res://.godot/imported/Explosion.animation.impact.png-3b2bf65e1849ba48bb552da8fabe3820.ctex::
-::res://art/Enemy Art/::1777590476
-Opticpus.art.png::CompressedTexture2D::2522452634617645394::1777590271::1777590476::1::::<><><>0<>0<>6ac948c7bbee0c370de1bfc74c28527e<>res://.godot/imported/Opticpus.art.png-51ed003fb3197d3c4c1b2168cada3c6d.ctex::
-::res://art/Logo:extras/::1777590476
-TL.Logo.v2 (1).png::CompressedTexture2D::4481250454545510516::1777590271::1777590476::1::::<><><>0<>0<>f78c64bc6139bd3a04603106c01e00a9<>res://.godot/imported/TL.Logo.v2 (1).png-6cf2e739439fb1eeb3af6fccdbe50435.ctex::
-TL.Logo.v2.png::CompressedTexture2D::153229810480230130::1777590271::1777590476::1::::<><><>0<>0<>1ede87d699323bcf94a7d38657388ff3<>res://.godot/imported/TL.Logo.v2.png-4bf68f9cde8724c581b7664c5fd00bab.ctex::
-TL.Logo.v3 (1).png::CompressedTexture2D::3308320923876551540::1777590271::1777590476::1::::<><><>0<>0<>af7daaa5abf95a7f3097666ecf3fd9f7<>res://.godot/imported/TL.Logo.v3 (1).png-853a66068266cda9df70c8f509dc306c.ctex::
-TL.Logo.v3.png::CompressedTexture2D::9115795514925212871::1777590271::1777590476::1::::<><><>0<>0<>a005b7d321ca2ed2ff712f667e99a9ad<>res://.godot/imported/TL.Logo.v3.png-afb71b949934fa8c13e06fda8714b3f6.ctex::
-::res://art/Stage Art/::1777590476
-Floor.Tile1.End_Tile (1).png::CompressedTexture2D::7555260669831290087::1777590271::1777590476::1::::<><><>0<>0<>ffa9dfac0075dffb75f9e6cf9bd8691b<>res://.godot/imported/Floor.Tile1.End_Tile (1).png-b8db06ec32d3e260de512a383c7274d1.ctex::
-Floor.Tile1.improved.png::CompressedTexture2D::8394215231714676274::1777590271::1777590476::1::::<><><>0<>0<>14b07a64586a3101cbe22b534c25ff2e<>res://.godot/imported/Floor.Tile1.improved.png-5a4865233ccee4256c9446a129452e1a.ctex::
-Pipe.platform.bent (1).png::CompressedTexture2D::8773042641676025154::1777590271::1777590476::1::::<><><>0<>0<>cf951929723337ffb5ff6ac317763580<>res://.godot/imported/Pipe.platform.bent (1).png-2aff496cdc4e76644c79b89aa68fc569.ctex::
-Pipe.platform.png::CompressedTexture2D::8485176050942028150::1777590271::1777590476::1::::<><><>0<>0<>4e5c7c006de6d908b434426935ddb69e<>res://.godot/imported/Pipe.platform.png-99853f4291610ef6b8711e739079d418.ctex::
-Pipe.png::CompressedTexture2D::4094078593359010121::1777590271::1777590476::1::::<><><>0<>0<>8eabfe40d1e53236048cb1266d823823<>res://.godot/imported/Pipe.png-aa6d1d16b9ac52b94edfffde47266a0e.ctex::
-Wall_Tile.1.Pipes.png::CompressedTexture2D::7551958814498807459::1777590271::1777590476::1::::<><><>0<>0<>4c30de210e81fdba09215761b313c581<>res://.godot/imported/Wall_Tile.1.Pipes.png-19751a1479bd8ad8654f7be4534365f8.ctex::
-Wall_Tile.2.Window.png::CompressedTexture2D::1744202331612306964::1777590271::1777590476::1::::<><><>0<>0<>725e3123653501fb5ddb1eb20405b7f7<>res://.godot/imported/Wall_Tile.2.Window.png-d78919c5f283ccf9637966478a1d5362.ctex::
-::res://art/Temp Art/::1777590271
-TEMP_floortile.png::CompressedTexture2D::5449768699638635667::1777590271::1777590271::1::::<><><>0<>0<>eb90dc23b0a58dc072b421853b78844c<>res://.godot/imported/TEMP_floortile.png-280775679c783869db1681cbbc77e2f4.ctex::
-TEMP_mainchar_attack_melee.png::CompressedTexture2D::7413665191394386427::1777590271::1777590271::1::::<><><>0<>0<>63c5e3e857f401b099ee9dc057799f2c<>res://.godot/imported/TEMP_mainchar_attack_melee.png-88356c30fe7243d0c9d211b52bb03e61.ctex::
-TEMP_mainchar_jump.png::CompressedTexture2D::4746183626383775997::1777590271::1777590271::1::::<><><>0<>0<>e93304522d39bc9ed02da0e3fb429ead<>res://.godot/imported/TEMP_mainchar_jump.png-38c1e255e4dc559be9e8a82ff1f3180a.ctex::
-TEMP_mainchar_walk.png::CompressedTexture2D::5314467185975961184::1777590271::1777590271::1::::<><><>0<>0<>a5ca35a8560b504068bbc483ed0b70fc<>res://.godot/imported/TEMP_mainchar_walk.png-4529fbf0a6b71026c7041477d32c1a0f.ctex::
-TEMP_wall.png::CompressedTexture2D::6231562271789974660::1777590271::1777590271::1::::<><><>0<>0<>38407098c94c2f905f1294dd89baea0c<>res://.godot/imported/TEMP_wall.png-f9350e6c4f882842094556ff4ce76372.ctex::
-::res://assets/::1777590189
-::res://assets/audio/::1777590190
-::res://assets/audio/music/::1777590190
-Conduction.wav::AudioStreamWAV::487581160763583022::1777590190::1777590190::1::::<><><>0<>0<>c96801076b676e52d72ca81fcfee805c<>res://.godot/imported/Conduction.wav-16d64a917cfd0e0a9cdad0ed17f529a2.sample::
-Tempting Fate.wav::AudioStreamWAV::3955150728834472042::1777590190::1777590190::1::::<><><>0<>0<>c70f15987e27eb3634af4f766d478c1a<>res://.godot/imported/Tempting Fate.wav-fc248448b5b85f6c3a6aca128971e8e7.sample::
-::res://assets/audio/sfx/::1777590190
-footsteps.wav::AudioStreamWAV::3205027700389866693::1777590190::1777590190::1::::<><><>0<>0<>500f7b0464961f2f578f5354d14843d7<>res://.godot/imported/footsteps.wav-ea4f5aa95f770307fc077f4cb1a5710b.sample::
-melee.wav::AudioStreamWAV::4734375722349904855::1777590190::1777590190::1::::<><><>0<>0<>676bc9903ecb300ab5fa0cfde9aed82e<>res://.godot/imported/melee.wav-b6552e29e180c726f7d36cc342a8556a.sample::
-melee_hit.wav::AudioStreamWAV::4908349685006914457::1777590190::1777590190::1::::<><><>0<>0<>67c8734e503594a8336dce8999176e22<>res://.godot/imported/melee_hit.wav-6242d1e6804b3b0ef09b9a1eaf695008.sample::
-shoot.wav::AudioStreamWAV::686167254654077663::1777590190::1777590190::1::::<><><>0<>0<>e027130ab72c8a9a036f2560f7521411<>res://.godot/imported/shoot.wav-f3ce9b4ae60220ecd3cf78df7278a10f.sample::
-shot_hit.wav::AudioStreamWAV::5033946321600716875::1777590190::1777590190::1::::<><><>0<>0<>f150b7e3ef6689a450b48564ca7e9613<>res://.godot/imported/shot_hit.wav-bdbb59d50897b24184d5b0fffb1e4a7f.sample::
-::res://assets/scenes/::1776289883
-::res://assets/scenes/areas/::1777590190
-audio_controller.tscn::PackedScene::2914588065531791165::1777590190::0::1::::<><><>0<>0<><>::uid://ftcrh64w0ydj::::res://assets/scripts/audio_controller.gd<>uid://g7gnjnqgnh1w::::res://assets/audio/music/Conduction.wav<>uid://blwslqxm2x1bt::::res://assets/audio/sfx/footsteps.wav<>uid://j1ncsbswc51d::::res://assets/audio/sfx/shoot.wav<>uid://cb6v2jlnwgc6d::::res://assets/audio/sfx/melee_hit.wav<>uid://cdyqmixbv17vb::::res://assets/audio/sfx/shot_hit.wav<>uid://b8pmqg1ie8sjv::::res://assets/audio/sfx/melee.wav<>uid://bwl50wmy3edhq::::res://assets/audio/music/Tempting Fate.wav
-bullet.tscn::PackedScene::7984085185586620425::1777590190::0::1::::<><><>0<>0<><>::uid://bcibgvsjdtoom::::res://assets/sprites/TEMP_bullet.png<>uid://cqmst0tck8goc::::res://assets/scripts/bullet.gd
-bullet_impact.tscn::PackedScene::7426102352085790001::1777590190::0::1::::<><><>0<>0<><>::uid://dfnmhgtt4v8io::::res://assets/sprites/TEMP_bulletImpact.png<>uid://rcxxohaosoyb::::res://assets/scripts/bullet_impact.gd
-enemy_death_effect.tscn::PackedScene::4775774103868203578::1777590190::0::1::::<><><>0<>0<><>::uid://b0kfw5uitbbgu::::res://assets/sprites/TEMP_deatheffect.png<>uid://obbka2nf5fh3::::res://assets/scripts/enemy_death_effect.gd
-enemy_test.tscn::PackedScene::2031834302770388661::1777590190::0::1::::<><><>0<>0<><>::uid://sqiu6bubad3p::::res://assets/scripts/enemy_test.gd<>uid://dqim7ysg3sljm::::res://assets/sprites/Opticpus.art.png
-game.tscn::PackedScene::6739082860442276150::1777590190::0::1::::<><><>0<>0<><>::uid://bpa5qyqunk8c3::::res://assets/sprites/TEMP_floortile.png<>uid://cbntir6d2sn0p::::res://assets/scenes/areas/player.tscn<>uid://b2bsuic4a0mam::::res://assets/sprites/Wall_Tile.2.Window.png<>uid://b2cvi31j4tm2g::::res://assets/sprites/Wall_1 (1).png<>uid://37iaqkwjexv6::::res://assets/scenes/areas/enemy_test.tscn<>uid://x4sx25u1x61p::::res://assets/sprites/floor_tileset.png<>uid://5f8n8s1oisg2::::res://assets/sprites/Pipe.platform.png<>uid://e8euppumncyu::::res://assets/sprites/Wall_Tile.1.Pipes.png<>uid://gmmhkekd5cvs::::res://assets/sprites/Wall_window.png<>uid://bn0f2jf03wr00::::res://assets/sprites/TEMP_background.png
-melee_hitbox.tscn::PackedScene::6746477278006801165::1777590190::0::1::::<><><>0<>0<><>::uid://grpaa3ukgk4p::::res://assets/scripts/melee_hitbox.gd
-player.tscn::PackedScene::4871035971999813621::1777590190::0::1::::<><><>0<>0<><>::uid://cuanattouopgk::::res://assets/scripts/player_controller.gd<>uid://c3r0lf5hea682::::res://assets/sprites/playerAnimations.png
-::res://assets/scripts/::1777590190
-audio_controller.gd::GDScript::390319604899638871::1777590190::0::1::::<>Node2D<><>0<>0<><>::
-bullet.gd::GDScript::5921763577138003102::1777590190::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-bullet_impact.gd::GDScript::1198777407608077465::1777590190::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-enemy_death_effect.gd::GDScript::984786805926575166::1777590190::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-enemy_test.gd::GDScript::1296952312048477091::1777590190::0::1::::<>CharacterBody2D<><>0<>0<><>::
-melee_hitbox.gd::GDScript::457138282715551329::1777590190::0::1::::<>Area2D<><>0<>0<><>::
-player_controller.gd::GDScript::6177408589011140930::1777590190::0::1::::PlatformerController2D<>CharacterBody2D<><>0<>0<><>::
-::res://assets/sprites/::1777590190
-Explosion.animation.impact.png::CompressedTexture2D::2139061537053292507::1777590190::1777590190::1::::<><><>0<>0<>8c7d3fa6f22018a69d2e12b98271d1c8<>res://.godot/imported/Explosion.animation.impact.png-38d7d2bed14aaf7880e494a6ac25e2b5.ctex::
-floor_tileset.png::CompressedTexture2D::1675345803091067607::1777590190::1777590190::1::::<><><>0<>0<>b71243b6382c391849616b9337e98fad<>res://.godot/imported/floor_tileset.png-d3d1a20c480cdceb319cd7949dfc99ca.ctex::
-Opticpus.art.png::CompressedTexture2D::8299585609316087162::1777590190::1777590190::1::::<><><>0<>0<>a059fa7fd340e58b253129d0d3264bad<>res://.godot/imported/Opticpus.art.png-18c68bf3d88f066440c53f105d3ff475.ctex::
-Pipe.platform.bent (1).png::CompressedTexture2D::2207869330138483064::1777590190::1777590190::1::::<><><>0<>0<>e0be733b2043a92961c844ab132dff8c<>res://.godot/imported/Pipe.platform.bent (1).png-58ebeda5f6d75aec6f6e4ac043a75602.ctex::
-Pipe.platform.png::CompressedTexture2D::2118015836270726799::1777590190::1777590190::1::::<><><>0<>0<>57e26a8c0bef0ae81750c1917f0b22c9<>res://.godot/imported/Pipe.platform.png-bf04ef9f10e12b96ab7f937a03f95997.ctex::
-Pipe.png::CompressedTexture2D::1324117304332067116::1777590190::1777590190::1::::<><><>0<>0<>72120a07b4f7669dd71dc7fe28782ea9<>res://.godot/imported/Pipe.png-96aabdb21004bab9794d37784d460922.ctex::
-playerAnimations.png::CompressedTexture2D::6774761288906554009::1777590190::1777590190::1::::<><><>0<>0<>f660182e0fd5b808460f1ea32155f0e7<>res://.godot/imported/playerAnimations.png-da1f296c2819ac3ba532544bfbae7805.ctex::
-TEMP_background.png::CompressedTexture2D::3350837377846642559::1777590190::1777590190::1::::<><><>0<>0<>746ab576a0dbe76ba3eb8159b392f070<>res://.godot/imported/TEMP_background.png-9f23592cd95f82cadda53bfacbca4762.ctex::
-TEMP_bullet.png::CompressedTexture2D::2543385955968363656::1776289883::1776289883::1::::<><><>0<>0<>3c4d74331939f39ce76e0381f7b20de8<>res://.godot/imported/TEMP_bullet.png-8400d781d62e52124ae57ed966c67b14.ctex::
-TEMP_bulletImpact.png::CompressedTexture2D::7537784629937049402::1777590190::1777590190::1::::<><><>0<>0<>02f7e57e49bd99ec175da93d5affd87c<>res://.godot/imported/TEMP_bulletImpact.png-b1f0d0c442969a00e4c1f373cc7ddd42.ctex::
-TEMP_deatheffect.png::CompressedTexture2D::4162130031599755548::1777590190::1777590190::1::::<><><>0<>0<>0aa00df2cc9509a53eef6448c4f55f93<>res://.godot/imported/TEMP_deatheffect.png-0e4b0ac1e782636ff4c72abfed9cdc4a.ctex::
-TEMP_dummy.png::CompressedTexture2D::2625202061532067792::1777590190::1777590190::1::::<><><>0<>0<>f077c460112bdf5558f6f0ec24b31b55<>res://.godot/imported/TEMP_dummy.png-169962e1e74e20fc415d11f308c777e7.ctex::
-TEMP_floortile.png::CompressedTexture2D::3441104706952845316::1775677751::1775677751::1::::<><><>0<>0<>5e61ece15e2694dc20c0d256eca2e43c<>res://.godot/imported/TEMP_floortile.png-9cff5f6b41ba589a492ff2ecb7946435.ctex::
-Wall_1 (1).png::CompressedTexture2D::4286939071894582868::1777590190::1777590190::1::::<><><>0<>0<>bb61b9048c1209be6d80db5726d743d5<>res://.godot/imported/Wall_1 (1).png-a505f235f39c929365ee8733bb736da4.ctex::
-Wall_Tile.1.Pipes.png::CompressedTexture2D::349159236232842932::1777590190::1777590190::1::::<><><>0<>0<>0c4a2d65cb970a37f19dd0610c5c9a20<>res://.godot/imported/Wall_Tile.1.Pipes.png-a674bcaada8fe68399983b165019fd33.ctex::
-Wall_Tile.2.Window.png::CompressedTexture2D::4284712886016963236::1777590190::1777590190::1::::<><><>0<>0<>42c5602650b825dca33066ead2d6926e<>res://.godot/imported/Wall_Tile.2.Window.png-308c8146c0e348f7310b7413f67dbdc6.ctex::
-Wall_window.png::CompressedTexture2D::446647231219707972::1777590190::1777590190::1::::<><><>0<>0<>0e02d23ab285061cb507514cac148c8d<>res://.godot/imported/Wall_window.png-c75a7d88ded5c26849de55c300b33709.ctex::
+::res://::1777603730
+README.md::TextFile::-1::1777603587::0::1::::<><><>0<>0<><>::
+::res://art/::1777603688
+::res://art/Background Art/::1777603688
+::res://art/Character Art/::1777603688
+Melee.Moving.png::CompressedTexture2D::6216085230779079195::1777603688::1777603688::1::::<><><>0<>0<>42ccfb3d24ac942170e79312ec568cce<>res://.godot/imported/Melee.Moving.png-9a1231601d9da06ccf598fd31f196316.ctex::
+Monster Hunter Character Art - 1.FALL.OUTLINED (1).png::CompressedTexture2D::4675414810471303819::1777603688::1777603688::1::::<><><>0<>0<>cead1ef81fa7528bd96d139e45b1d3b0<>res://.godot/imported/Monster Hunter Character Art - 1.FALL.OUTLINED (1).png-284ea0bf458f0d0ea10cf1f464071531.ctex::
+Monster Hunter Character Art - 1.IDLE (1).png::CompressedTexture2D::5904917310603220532::1777603688::1777603688::1::::<><><>0<>0<>ac16e80809f578af4044aa36aa67ba7a<>res://.godot/imported/Monster Hunter Character Art - 1.IDLE (1).png-cb57cc469b146a82c4e458807d21677c.ctex::
+Monster Hunter Character Art - 1.IDLE.OUTLINED.png::CompressedTexture2D::5759604980108133648::1777603688::1777603688::1::::<><><>0<>0<>ca28a9ef32270a06df15026decd85c63<>res://.godot/imported/Monster Hunter Character Art - 1.IDLE.OUTLINED.png-6c1a10c7b1e095b085a678a4b6d7c819.ctex::
+Monster Hunter Character Art - 1.JUMP.OUTLINED.png::CompressedTexture2D::1385101825655426556::1777603688::1777603688::1::::<><><>0<>0<>4d265e10d4d097340d4fefa6639acd65<>res://.godot/imported/Monster Hunter Character Art - 1.JUMP.OUTLINED.png-8de9093beef952a1d9e125c90859311b.ctex::
+Monster Hunter Character Art - 1.melee.attack.png::CompressedTexture2D::4113278081156902178::1777603688::1777603688::1::::<><><>0<>0<>8c5ac615969b534f159ffc5ce081ab07<>res://.godot/imported/Monster Hunter Character Art - 1.melee.attack.png-bf4063cc15454d8479fb6ee3e53ad1e4.ctex::
+Monster Hunter Character Art - Ranged.attack.Spritesheet.png::CompressedTexture2D::4976446107984983022::1777603688::1777603688::1::::<><><>0<>0<>75a4dcbf9e74f8b27d2db3b17d05e597<>res://.godot/imported/Monster Hunter Character Art - Ranged.attack.Spritesheet.png-5e4c7c140d943a19a82a645e998a783e.ctex::
+Monster Hunter Character Art.WalkingAnimation.WIP.png::CompressedTexture2D::5805358893351665137::1777603688::1777603688::1::::<><><>0<>0<>72183b55f1a166a9b60167c82370637f<>res://.godot/imported/Monster Hunter Character Art.WalkingAnimation.WIP.png-e27322baea9c09564d1122c7c3c0d982.ctex::
+playerAnimations.png::CompressedTexture2D::8270857853295278830::1777603688::1777603688::1::::<><><>0<>0<>4cbae840ab96133bd8fdd18910db21a7<>res://.godot/imported/playerAnimations.png-1b1708435175b821f8390f75a2af8682.ctex::
+Ranged.Moving.png::CompressedTexture2D::2309435878791790423::1777603688::1777603688::1::::<><><>0<>0<>f96ca80e4bf78bb3d506b19e51d441b5<>res://.godot/imported/Ranged.Moving.png-fb8ce686a2ae1c31ebe88a4a1f8edd88.ctex::
+::res://art/Effects/::1777603688
+Explosion.animation.impact.png::CompressedTexture2D::7504699460277438000::1777603688::1777603688::1::::<><><>0<>0<>e2b50b4c9dd221cbec705e4dcd36473e<>res://.godot/imported/Explosion.animation.impact.png-3b2bf65e1849ba48bb552da8fabe3820.ctex::
+::res://art/Enemy Art/::1777603688
+Opticpus.art.png::CompressedTexture2D::2522452634617645394::1777603688::1777603688::1::::<><><>0<>0<>6ac948c7bbee0c370de1bfc74c28527e<>res://.godot/imported/Opticpus.art.png-51ed003fb3197d3c4c1b2168cada3c6d.ctex::
+::res://art/Logo:extras/::1777603688
+TL.Logo.v2 (1).png::CompressedTexture2D::4481250454545510516::1777603688::1777603688::1::::<><><>0<>0<>f78c64bc6139bd3a04603106c01e00a9<>res://.godot/imported/TL.Logo.v2 (1).png-6cf2e739439fb1eeb3af6fccdbe50435.ctex::
+TL.Logo.v2.png::CompressedTexture2D::153229810480230130::1777603688::1777603688::1::::<><><>0<>0<>1ede87d699323bcf94a7d38657388ff3<>res://.godot/imported/TL.Logo.v2.png-4bf68f9cde8724c581b7664c5fd00bab.ctex::
+TL.Logo.v3 (1).png::CompressedTexture2D::3308320923876551540::1777603688::1777603688::1::::<><><>0<>0<>af7daaa5abf95a7f3097666ecf3fd9f7<>res://.godot/imported/TL.Logo.v3 (1).png-853a66068266cda9df70c8f509dc306c.ctex::
+TL.Logo.v3.png::CompressedTexture2D::9115795514925212871::1777603688::1777603688::1::::<><><>0<>0<>a005b7d321ca2ed2ff712f667e99a9ad<>res://.godot/imported/TL.Logo.v3.png-afb71b949934fa8c13e06fda8714b3f6.ctex::
+::res://art/Stage Art/::1777603688
+Floor.Tile1.End_Tile (1).png::CompressedTexture2D::7555260669831290087::1777603688::1777603688::1::::<><><>0<>0<>ffa9dfac0075dffb75f9e6cf9bd8691b<>res://.godot/imported/Floor.Tile1.End_Tile (1).png-b8db06ec32d3e260de512a383c7274d1.ctex::
+Floor.Tile1.improved.png::CompressedTexture2D::8394215231714676274::1777603688::1777603688::1::::<><><>0<>0<>14b07a64586a3101cbe22b534c25ff2e<>res://.godot/imported/Floor.Tile1.improved.png-5a4865233ccee4256c9446a129452e1a.ctex::
+Pipe.platform.bent (1).png::CompressedTexture2D::8773042641676025154::1777603688::1777603688::1::::<><><>0<>0<>cf951929723337ffb5ff6ac317763580<>res://.godot/imported/Pipe.platform.bent (1).png-2aff496cdc4e76644c79b89aa68fc569.ctex::
+Pipe.platform.png::CompressedTexture2D::8485176050942028150::1777603688::1777603688::1::::<><><>0<>0<>4e5c7c006de6d908b434426935ddb69e<>res://.godot/imported/Pipe.platform.png-99853f4291610ef6b8711e739079d418.ctex::
+Pipe.png::CompressedTexture2D::4094078593359010121::1777603688::1777603688::1::::<><><>0<>0<>8eabfe40d1e53236048cb1266d823823<>res://.godot/imported/Pipe.png-aa6d1d16b9ac52b94edfffde47266a0e.ctex::
+Wall_Tile.1.Pipes.png::CompressedTexture2D::7551958814498807459::1777603688::1777603688::1::::<><><>0<>0<>4c30de210e81fdba09215761b313c581<>res://.godot/imported/Wall_Tile.1.Pipes.png-19751a1479bd8ad8654f7be4534365f8.ctex::
+Wall_Tile.2.Window.png::CompressedTexture2D::1744202331612306964::1777603688::1777603688::1::::<><><>0<>0<>725e3123653501fb5ddb1eb20405b7f7<>res://.godot/imported/Wall_Tile.2.Window.png-d78919c5f283ccf9637966478a1d5362.ctex::
+::res://art/Temp Art/::1777603688
+TEMP_floortile.png::CompressedTexture2D::5449768699638635667::1777603688::1777603688::1::::<><><>0<>0<>eb90dc23b0a58dc072b421853b78844c<>res://.godot/imported/TEMP_floortile.png-280775679c783869db1681cbbc77e2f4.ctex::
+TEMP_mainchar_attack_melee.png::CompressedTexture2D::7413665191394386427::1777603688::1777603688::1::::<><><>0<>0<>63c5e3e857f401b099ee9dc057799f2c<>res://.godot/imported/TEMP_mainchar_attack_melee.png-88356c30fe7243d0c9d211b52bb03e61.ctex::
+TEMP_mainchar_jump.png::CompressedTexture2D::4746183626383775997::1777603688::1777603688::1::::<><><>0<>0<>e93304522d39bc9ed02da0e3fb429ead<>res://.godot/imported/TEMP_mainchar_jump.png-38c1e255e4dc559be9e8a82ff1f3180a.ctex::
+TEMP_mainchar_walk.png::CompressedTexture2D::5314467185975961184::1777603688::1777603688::1::::<><><>0<>0<>a5ca35a8560b504068bbc483ed0b70fc<>res://.godot/imported/TEMP_mainchar_walk.png-4529fbf0a6b71026c7041477d32c1a0f.ctex::
+TEMP_wall.png::CompressedTexture2D::6231562271789974660::1777603688::1777603688::1::::<><><>0<>0<>38407098c94c2f905f1294dd89baea0c<>res://.godot/imported/TEMP_wall.png-f9350e6c4f882842094556ff4ce76372.ctex::
+::res://assets/::1777603688
+::res://assets/audio/::1777603689
+::res://assets/audio/music/::1777603689
+Conduction.wav::AudioStreamWAV::487581160763583022::1777603688::1777603688::1::::<><><>0<>0<>c96801076b676e52d72ca81fcfee805c<>res://.godot/imported/Conduction.wav-16d64a917cfd0e0a9cdad0ed17f529a2.sample::
+Tempting Fate.wav::AudioStreamWAV::3955150728834472042::1777603689::1777603689::1::::<><><>0<>0<>c70f15987e27eb3634af4f766d478c1a<>res://.godot/imported/Tempting Fate.wav-fc248448b5b85f6c3a6aca128971e8e7.sample::
+::res://assets/audio/sfx/::1777603689
+footsteps.wav::AudioStreamWAV::3205027700389866693::1777603689::1777603689::1::::<><><>0<>0<>500f7b0464961f2f578f5354d14843d7<>res://.godot/imported/footsteps.wav-ea4f5aa95f770307fc077f4cb1a5710b.sample::
+melee.wav::AudioStreamWAV::4734375722349904855::1777603689::1777603689::1::::<><><>0<>0<>676bc9903ecb300ab5fa0cfde9aed82e<>res://.godot/imported/melee.wav-b6552e29e180c726f7d36cc342a8556a.sample::
+melee_hit.wav::AudioStreamWAV::4908349685006914457::1777603689::1777603689::1::::<><><>0<>0<>67c8734e503594a8336dce8999176e22<>res://.godot/imported/melee_hit.wav-6242d1e6804b3b0ef09b9a1eaf695008.sample::
+shoot.wav::AudioStreamWAV::686167254654077663::1777603689::1777603689::1::::<><><>0<>0<>e027130ab72c8a9a036f2560f7521411<>res://.godot/imported/shoot.wav-f3ce9b4ae60220ecd3cf78df7278a10f.sample::
+shot_hit.wav::AudioStreamWAV::5033946321600716875::1777603689::1777603689::1::::<><><>0<>0<>f150b7e3ef6689a450b48564ca7e9613<>res://.godot/imported/shot_hit.wav-bdbb59d50897b24184d5b0fffb1e4a7f.sample::
+::res://assets/scenes/::1777603689
+::res://assets/scenes/areas/::1777603689
+audio_controller.tscn::PackedScene::2914588065531791165::1777603689::0::1::::<><><>0<>0<><>::uid://ftcrh64w0ydj::::res://assets/scripts/audio_controller.gd<>uid://g7gnjnqgnh1w::::res://assets/audio/music/Conduction.wav<>uid://blwslqxm2x1bt::::res://assets/audio/sfx/footsteps.wav<>uid://j1ncsbswc51d::::res://assets/audio/sfx/shoot.wav<>uid://cb6v2jlnwgc6d::::res://assets/audio/sfx/melee_hit.wav<>uid://cdyqmixbv17vb::::res://assets/audio/sfx/shot_hit.wav<>uid://b8pmqg1ie8sjv::::res://assets/audio/sfx/melee.wav<>uid://bwl50wmy3edhq::::res://assets/audio/music/Tempting Fate.wav
+bullet.tscn::PackedScene::7984085185586620425::1777603689::0::1::::<><><>0<>0<><>::uid://bcibgvsjdtoom::::res://assets/sprites/TEMP_bullet.png<>uid://cqmst0tck8goc::::res://assets/scripts/bullet.gd
+bullet_impact.tscn::PackedScene::7426102352085790001::1777603689::0::1::::<><><>0<>0<><>::uid://dfnmhgtt4v8io::::res://assets/sprites/TEMP_bulletImpact.png<>uid://rcxxohaosoyb::::res://assets/scripts/bullet_impact.gd
+enemy_death_effect.tscn::PackedScene::4775774103868203578::1777603689::0::1::::<><><>0<>0<><>::uid://b0kfw5uitbbgu::::res://assets/sprites/TEMP_deatheffect.png<>uid://obbka2nf5fh3::::res://assets/scripts/enemy_death_effect.gd
+enemy_test.tscn::PackedScene::2031834302770388661::1777603689::0::1::::<><><>0<>0<><>::uid://sqiu6bubad3p::::res://assets/scripts/enemy_test.gd<>uid://dqim7ysg3sljm::::res://assets/sprites/Opticpus.art.png
+game.tscn::PackedScene::6739082860442276150::1777603689::0::1::::<><><>0<>0<><>::uid://bpa5qyqunk8c3::::res://assets/sprites/TEMP_floortile.png<>uid://cbntir6d2sn0p::::res://assets/scenes/areas/player.tscn<>uid://b2bsuic4a0mam::::res://assets/sprites/Wall_Tile.2.Window.png<>uid://b2cvi31j4tm2g::::res://assets/sprites/Wall_1 (1).png<>uid://37iaqkwjexv6::::res://assets/scenes/areas/enemy_test.tscn<>uid://x4sx25u1x61p::::res://assets/sprites/floor_tileset.png<>uid://5f8n8s1oisg2::::res://assets/sprites/Pipe.platform.png<>uid://e8euppumncyu::::res://assets/sprites/Wall_Tile.1.Pipes.png<>uid://gmmhkekd5cvs::::res://assets/sprites/Wall_window.png<>uid://bn0f2jf03wr00::::res://assets/sprites/TEMP_background.png
+melee_hitbox.tscn::PackedScene::6746477278006801165::1777603689::0::1::::<><><>0<>0<><>::uid://grpaa3ukgk4p::::res://assets/scripts/melee_hitbox.gd
+player.tscn::PackedScene::4871035971999813621::1777603689::0::1::::<><><>0<>0<><>::uid://cuanattouopgk::::res://assets/scripts/player_controller.gd<>uid://c3r0lf5hea682::::res://assets/sprites/playerAnimations.png<>uid://blwslqxm2x1bt::::res://assets/audio/sfx/footsteps.wav
+::res://assets/scripts/::1777603689
+audio_controller.gd::GDScript::390319604899638871::1777603689::0::1::::<>Node2D<><>0<>0<><>::
+bullet.gd::GDScript::5921763577138003102::1777603689::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+bullet_impact.gd::GDScript::1198777407608077465::1777603689::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+enemy_death_effect.gd::GDScript::984786805926575166::1777603689::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+enemy_test.gd::GDScript::1296952312048477091::1777603689::0::1::::<>CharacterBody2D<><>0<>0<><>::
+melee_hitbox.gd::GDScript::457138282715551329::1777603689::0::1::::<>Area2D<><>0<>0<><>::
+player_controller.gd::GDScript::6177408589011140930::1777603689::0::1::::PlatformerController2D<>CharacterBody2D<><>0<>0<><>::
+::res://assets/sprites/::1777603689
+Explosion.animation.impact.png::CompressedTexture2D::2139061537053292507::1777603689::1777603689::1::::<><><>0<>0<>8c7d3fa6f22018a69d2e12b98271d1c8<>res://.godot/imported/Explosion.animation.impact.png-38d7d2bed14aaf7880e494a6ac25e2b5.ctex::
+floor_tileset.png::CompressedTexture2D::1675345803091067607::1777603689::1777603689::1::::<><><>0<>0<>b71243b6382c391849616b9337e98fad<>res://.godot/imported/floor_tileset.png-d3d1a20c480cdceb319cd7949dfc99ca.ctex::
+Opticpus.art.png::CompressedTexture2D::8299585609316087162::1777603689::1777603689::1::::<><><>0<>0<>a059fa7fd340e58b253129d0d3264bad<>res://.godot/imported/Opticpus.art.png-18c68bf3d88f066440c53f105d3ff475.ctex::
+Pipe.platform.bent (1).png::CompressedTexture2D::2207869330138483064::1777603689::1777603689::1::::<><><>0<>0<>e0be733b2043a92961c844ab132dff8c<>res://.godot/imported/Pipe.platform.bent (1).png-58ebeda5f6d75aec6f6e4ac043a75602.ctex::
+Pipe.platform.png::CompressedTexture2D::2118015836270726799::1777603689::1777603689::1::::<><><>0<>0<>57e26a8c0bef0ae81750c1917f0b22c9<>res://.godot/imported/Pipe.platform.png-bf04ef9f10e12b96ab7f937a03f95997.ctex::
+Pipe.png::CompressedTexture2D::1324117304332067116::1777603689::1777603689::1::::<><><>0<>0<>72120a07b4f7669dd71dc7fe28782ea9<>res://.godot/imported/Pipe.png-96aabdb21004bab9794d37784d460922.ctex::
+playerAnimations.png::CompressedTexture2D::6774761288906554009::1777603689::1777603689::1::::<><><>0<>0<>f660182e0fd5b808460f1ea32155f0e7<>res://.godot/imported/playerAnimations.png-da1f296c2819ac3ba532544bfbae7805.ctex::
+TEMP_background.png::CompressedTexture2D::3350837377846642559::1777603689::1777603689::1::::<><><>0<>0<>746ab576a0dbe76ba3eb8159b392f070<>res://.godot/imported/TEMP_background.png-9f23592cd95f82cadda53bfacbca4762.ctex::
+TEMP_bullet.png::CompressedTexture2D::2543385955968363656::1777603689::1777603689::1::::<><><>0<>0<>3c4d74331939f39ce76e0381f7b20de8<>res://.godot/imported/TEMP_bullet.png-8400d781d62e52124ae57ed966c67b14.ctex::
+TEMP_bulletImpact.png::CompressedTexture2D::7537784629937049402::1777603689::1777603689::1::::<><><>0<>0<>02f7e57e49bd99ec175da93d5affd87c<>res://.godot/imported/TEMP_bulletImpact.png-b1f0d0c442969a00e4c1f373cc7ddd42.ctex::
+TEMP_deatheffect.png::CompressedTexture2D::4162130031599755548::1777603689::1777603689::1::::<><><>0<>0<>0aa00df2cc9509a53eef6448c4f55f93<>res://.godot/imported/TEMP_deatheffect.png-0e4b0ac1e782636ff4c72abfed9cdc4a.ctex::
+TEMP_dummy.png::CompressedTexture2D::2625202061532067792::1777603689::1777603689::1::::<><><>0<>0<>f077c460112bdf5558f6f0ec24b31b55<>res://.godot/imported/TEMP_dummy.png-169962e1e74e20fc415d11f308c777e7.ctex::
+TEMP_floortile.png::CompressedTexture2D::3441104706952845316::1777603587::1777603587::1::::<><><>0<>0<>5e61ece15e2694dc20c0d256eca2e43c<>res://.godot/imported/TEMP_floortile.png-9cff5f6b41ba589a492ff2ecb7946435.ctex::
+Wall_1 (1).png::CompressedTexture2D::4286939071894582868::1777603689::1777603689::1::::<><><>0<>0<>bb61b9048c1209be6d80db5726d743d5<>res://.godot/imported/Wall_1 (1).png-a505f235f39c929365ee8733bb736da4.ctex::
+Wall_Tile.1.Pipes.png::CompressedTexture2D::349159236232842932::1777603689::1777603689::1::::<><><>0<>0<>0c4a2d65cb970a37f19dd0610c5c9a20<>res://.godot/imported/Wall_Tile.1.Pipes.png-a674bcaada8fe68399983b165019fd33.ctex::
+Wall_Tile.2.Window.png::CompressedTexture2D::4284712886016963236::1777603689::1777603689::1::::<><><>0<>0<>42c5602650b825dca33066ead2d6926e<>res://.godot/imported/Wall_Tile.2.Window.png-308c8146c0e348f7310b7413f67dbdc6.ctex::
+Wall_window.png::CompressedTexture2D::446647231219707972::1777603689::1777603689::1::::<><><>0<>0<>0e02d23ab285061cb507514cac148c8d<>res://.godot/imported/Wall_window.png-c75a7d88ded5c26849de55c300b33709.ctex::
