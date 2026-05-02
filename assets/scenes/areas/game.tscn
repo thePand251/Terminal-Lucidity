@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://brbapbe0qd5mv" path="res://assets/sprites/Wall_Blank.png" id="4_0bg8e"]
 [ext_resource type="Texture2D" uid="uid://gmmhkekd5cvs" path="res://assets/sprites/Wall_window.png" id="4_u7dki"]
 [ext_resource type="PackedScene" uid="uid://c7j52iepj2ppf" path="res://assets/scenes/areas/death_zone.tscn" id="7_fuxi7"]
+[ext_resource type="Script" uid="uid://k612mbk14p88" path="res://assets/scripts/spawnpoint.gd" id="10_fuxi7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yqjtg"]
 
@@ -112,3 +113,5 @@ position = Vector2(6, 4)
 position = Vector2(1537, 36)
 
 [node name="Spawnpoint" type="Node2D" parent="." unique_id=1548152390]
+position = Vector2(0, 61)
+script = ExtResource("10_fuxi7")

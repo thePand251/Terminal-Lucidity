@@ -116,7 +116,7 @@ class_name PlatformerController2D
 
 @onready var muzzle : Marker2D = $Muzzle
 @onready var death_zone : Area2D = $death_zone
-@onready var spawnpoint : Node2D = $Spawnpoint
+@onready var spawnpoint : Node2D = $"../Spawnpoint"
 
 #Music/SFX
 @onready var ac = $audio_controller
