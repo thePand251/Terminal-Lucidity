@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://dl0symj8xklyn"]
+[gd_scene format=3 uid="uid://pafyinldd8hl"]
 
-[ext_resource type="Texture2D" uid="uid://cm30g7abi1yoy" path="res://assets/sprites/Projectile_v1_new.png" id="1_jueuo"]
-[ext_resource type="Script" uid="uid://cqmst0tck8goc" path="res://assets/scripts/bullet.gd" id="2_jueuo"]
+[ext_resource type="Texture2D" uid="uid://b37yy5gwag4d5" path="res://assets/sprites/EyeBall_Projectile_Outlined_new.png" id="1_u12vf"]
+[ext_resource type="Script" uid="uid://c4n7747m3fg64" path="res://assets/scripts/boss_bullet.gd" id="2_u12vf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b8rc5"]
-atlas = ExtResource("1_jueuo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4s7w"]
+atlas = ExtResource("1_u12vf")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b8rc5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b8rc5")
+"texture": SubResource("AtlasTexture_a4s7w")
 }],
 "loop": true,
 "name": &"shoot",
@@ -22,18 +22,20 @@ animations = [{
 radius = 3.0
 height = 6.0
 
-[node name="Bullet" type="AnimatedSprite2D" unique_id=129013905]
+[node name="BossBullet" type="AnimatedSprite2D" unique_id=129013905]
 sprite_frames = SubResource("SpriteFrames_b8rc5")
 animation = &"shoot"
-script = ExtResource("2_jueuo")
+flip_h = true
+script = ExtResource("2_u12vf")
 
 [node name="Timer" type="Timer" parent="." unique_id=492378590]
+wait_time = 2.0
 one_shot = true
 autostart = true
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1235578307]
-collision_layer = 2
-collision_mask = 21
+collision_layer = 8
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=994386025]
 shape = SubResource("CapsuleShape2D_jueuo")

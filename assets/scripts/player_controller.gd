@@ -117,6 +117,7 @@ class_name PlatformerController2D
 @onready var muzzle : Marker2D = $Muzzle
 @onready var spawnpoint : Node2D = $"../Spawnpoint"
 
+
 #Music/SFX
 @onready var ac = $audio_controller
 
@@ -166,6 +167,8 @@ func take_damage() -> void:
 	print("DEAD")
 	visible = false
 	can_control = false
+	
+	
 	
 	await get_tree().create_timer(1).timeout
 	reset_player()
@@ -352,7 +355,6 @@ func _process(delta):
 	
 	fire_cooldown -= delta
 	
-
 	if rightHold and !latched:
 		anim.scale.x = animScaleLock.x
 	if leftHold and !latched:
@@ -796,3 +798,7 @@ func _endGroundPound():
 
 func _placeHolder():
 	print("")
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	if area.get_parent().has_method("boss_hit"):
+		take_damage()

@@ -1,13 +1,13 @@
-Marker2D
+AudioStreamPlayer
 CollisionShape2D
 Area2D
+Timer
+Marker2D
 Node2D
-AudioStreamPlayer
 AudioStreamPlayer2D
 Parallax2D
 Sprite2D
 ParallaxBackground
-Timer
 AnimatedSprite2D
 CharacterBody2D
 TileMap

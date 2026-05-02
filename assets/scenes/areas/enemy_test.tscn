@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://sqiu6bubad3p" path="res://assets/scripts/enemy_test.gd" id="1_iax8c"]
 [ext_resource type="Texture2D" uid="uid://brhsosdk4itu" path="res://assets/sprites/PARANOIA_Idle_Spritesheet_Outlined.png" id="2_6g268"]
+[ext_resource type="PackedScene" uid="uid://pafyinldd8hl" path="res://assets/scenes/areas/boss_bullet.tscn" id="2_jat6e"]
 [ext_resource type="PackedScene" uid="uid://bhr33suevlsj2" path="res://assets/scenes/areas/audio_controller.tscn" id="3_6g268"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jat6e"]
@@ -36,6 +37,7 @@ size = Vector2(150.25, 149)
 [node name="EnemyTest" type="CharacterBody2D" unique_id=597877175]
 position = Vector2(2, 1)
 script = ExtResource("1_iax8c")
+bullet_scene = ExtResource("2_jat6e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=837785587]
 position = Vector2(-1, -95)
@@ -49,7 +51,7 @@ position = Vector2(-3, -43)
 shape = SubResource("CapsuleShape2D_qkn5u")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1185904659]
-collision_layer = 4
+collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1287961790]
@@ -60,5 +62,11 @@ debug_color = Color(0.9254902, 0, 0, 0.41960785)
 [node name="audio_controller" parent="." unique_id=544440492 instance=ExtResource("3_6g268")]
 
 [node name="BossMuzzle" type="Marker2D" parent="." unique_id=1225790356]
+position = Vector2(-50, -87)
+
+[node name="Timer" type="Timer" parent="." unique_id=1074180400]
+wait_time = 2.0
+autostart = true
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

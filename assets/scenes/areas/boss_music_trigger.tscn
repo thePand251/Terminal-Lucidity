@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ck6xsopfw1df4"]
+
+[ext_resource type="Script" uid="uid://cxy1qldw10kqp" path="res://assets/scripts/boss_music_trigger.gd" id="1_bwxav"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7lrh"]
+size = Vector2(83, 261)
+
+[node name="boss_music_trigger" type="Area2D" unique_id=1412947756]
+script = ExtResource("1_bwxav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1925520323]
+position = Vector2(31.5, -120.5)
+shape = SubResource("RectangleShape2D_x7lrh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

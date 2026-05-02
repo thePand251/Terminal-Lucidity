@@ -176,7 +176,10 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=2136678792 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqpql"]
+size = Vector2(16.125, 36.25)
+
+[node name="Player" type="CharacterBody2D" unique_id=2136678792 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider") groups=["player"]]
 position = Vector2(0, 61)
 script = ExtResource("1_ciydl")
 PlayerSprite = NodePath("AnimatedSprite2D")
@@ -199,11 +202,21 @@ zoom = Vector2(3, 3)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1201258973]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_eiwrt")
-animation = &"run_melee"
+animation = &"idle"
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=925062913]
-position = Vector2(15, -25)
+position = Vector2(32, -25)
 
 [node name="audio_controller" parent="." unique_id=544440492 instance=ExtResource("4_eiwrt")]
 
+[node name="Hurtbox" type="Area2D" parent="." unique_id=532715657]
+collision_layer = 2
+collision_mask = 28
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1925057081]
+position = Vector2(0, -18.875)
+shape = SubResource("RectangleShape2D_eqpql")
+debug_color = Color(0.9254902, 0, 0, 0.41960785)
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

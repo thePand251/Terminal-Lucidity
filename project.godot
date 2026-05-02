@@ -14,6 +14,10 @@ config/name="Terminal Lucidity"
 run/main_scene="uid://c3apye5r17nb7"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+AudioController="*uid://ftcrh64w0ydj"
+
 [display]
 
 window/stretch/mode="canvas_items"

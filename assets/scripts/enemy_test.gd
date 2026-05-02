@@ -1,15 +1,19 @@
 extends CharacterBody2D
 
 var deathEffect = preload("res://assets/scenes/areas/enemy_death_effect.tscn")
-var bullet = preload("res://assets/scenes/areas/bullet.tscn")
+#var bullet = preload("res://assets/scenes/areas/boss_bullet.tscn")
+@export var bullet_scene: PackedScene
+
 @onready var ac = $audio_controller
 @onready var muzzle : Marker2D = $BossMuzzle
 var health : int = 30
 const gravity = 1000
 
 func _physics_process(delta: float) -> void:
+	
 	enemy_gravity(delta)
 	move_and_slide()
+	
 
 func enemy_gravity(delta : float):
 	velocity.y += gravity * delta
@@ -35,10 +39,22 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		queue_free()
 		
 	## attacking mechanics
-func player_shooting(_delta):
-	if Input.is_action_just_pressed("attack"):
-		var bulletInstance = bullet.instantiate() as Node2D
-		bulletInstance.direction = -1
-		bulletInstance.global_position = muzzle.global_position
-		get_parent().add_child(bulletInstance)
-		print("shot")
+func boss_shooting(_delta):
+	
+	var bullet = bullet_scene.instantiate()
+	get_tree().current_scene.add_child(bullet)
+	bullet.global_position = muzzle.global_position
+	print(get_tree().get_nodes_in_group("player"))
+		
+	var player = get_tree().get_first_node_in_group("player")
+	print(muzzle.global_position)
+	if player:
+		var target_pos = player.global_position + Vector2(0,-20)
+		var dir = (target_pos - bullet.global_position).normalized()
+		bullet.direction = dir
+			
+		print("boss shot")
+
+
+func _on_timer_timeout() -> void:
+	boss_shooting(0)

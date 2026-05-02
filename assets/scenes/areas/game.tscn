@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c7j52iepj2ppf" path="res://assets/scenes/areas/death_zone.tscn" id="7_fuxi7"]
 [ext_resource type="Texture2D" uid="uid://bgwhd8qasqf8w" path="res://assets/sprites/ceiling_tileset.png" id="8_xb0bh"]
 [ext_resource type="Script" uid="uid://k612mbk14p88" path="res://assets/scripts/spawnpoint.gd" id="10_fuxi7"]
+[ext_resource type="PackedScene" uid="uid://ck6xsopfw1df4" path="res://assets/scenes/areas/boss_music_trigger.tscn" id="14_xkibw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yqjtg"]
 
@@ -153,3 +154,6 @@ position = Vector2(1537, 36)
 [node name="Spawnpoint" type="Node2D" parent="." unique_id=1548152390]
 position = Vector2(0, 61)
 script = ExtResource("10_fuxi7")
+
+[node name="boss_music_trigger" parent="." unique_id=1412947756 instance=ExtResource("14_xkibw")]
+position = Vector2(1073, 111)
