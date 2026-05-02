@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dl0symj8xklyn"]
 
-[ext_resource type="Texture2D" uid="uid://bcibgvsjdtoom" path="res://assets/sprites/TEMP_bullet.png" id="1_g4jvw"]
+[ext_resource type="Texture2D" uid="uid://cm30g7abi1yoy" path="res://assets/sprites/Projectile_v1_new.png" id="1_jueuo"]
 [ext_resource type="Script" uid="uid://cqmst0tck8goc" path="res://assets/scripts/bullet.gd" id="2_jueuo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jueuo"]
-atlas = ExtResource("1_g4jvw")
-region = Rect2(0, 0, 8, 8)
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8rc5"]
+atlas = ExtResource("1_jueuo")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b8rc5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jueuo")
+"texture": SubResource("AtlasTexture_b8rc5")
 }],
 "loop": true,
 "name": &"shoot",

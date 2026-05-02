@@ -1,3 +1,4 @@
+Marker2D
 CollisionShape2D
 Area2D
 Node2D
@@ -9,6 +10,5 @@ ParallaxBackground
 Timer
 AnimatedSprite2D
 CharacterBody2D
-Marker2D
 TileMap
 Camera2D

@@ -1,42 +1,51 @@
 [gd_scene format=3 uid="uid://37iaqkwjexv6"]
 
 [ext_resource type="Script" uid="uid://sqiu6bubad3p" path="res://assets/scripts/enemy_test.gd" id="1_iax8c"]
-[ext_resource type="Texture2D" uid="uid://dqim7ysg3sljm" path="res://assets/sprites/Opticpus.art.png" id="2_edhau"]
+[ext_resource type="Texture2D" uid="uid://brhsosdk4itu" path="res://assets/sprites/PARANOIA_Idle_Spritesheet_Outlined.png" id="2_6g268"]
 [ext_resource type="PackedScene" uid="uid://bhr33suevlsj2" path="res://assets/scenes/areas/audio_controller.tscn" id="3_6g268"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6g268"]
-atlas = ExtResource("2_edhau")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jat6e"]
+atlas = ExtResource("2_6g268")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e3yn"]
+atlas = ExtResource("2_6g268")
+region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qkn5u"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6g268")
+"texture": SubResource("AtlasTexture_jat6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e3yn")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"idle",
+"speed": 1.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkn5u"]
-radius = 13.0
-height = 44.0
+radius = 67.0
+height = 152.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iax8c"]
-radius = 13.0
-height = 44.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgygv"]
+size = Vector2(150.25, 149)
 
 [node name="EnemyTest" type="CharacterBody2D" unique_id=597877175]
 position = Vector2(2, 1)
 script = ExtResource("1_iax8c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=837785587]
+position = Vector2(-1, -95)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_qkn5u")
-flip_h = true
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139088977]
-position = Vector2(-2, 9)
+position = Vector2(-3, -43)
 shape = SubResource("CapsuleShape2D_qkn5u")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1185904659]
@@ -44,10 +53,12 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1287961790]
-position = Vector2(-2, 9)
-shape = SubResource("CapsuleShape2D_iax8c")
+position = Vector2(3, -42)
+shape = SubResource("RectangleShape2D_vgygv")
 debug_color = Color(0.9254902, 0, 0, 0.41960785)
 
 [node name="audio_controller" parent="." unique_id=544440492 instance=ExtResource("3_6g268")]
+
+[node name="BossMuzzle" type="Marker2D" parent="." unique_id=1225790356]
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

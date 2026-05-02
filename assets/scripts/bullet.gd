@@ -1,13 +1,18 @@
 extends AnimatedSprite2D
 
 var bulletImpact = preload("res://assets/scenes/areas/bullet_impact.tscn")
+@onready var bullet : AnimatedSprite2D = $"."
 
 var speed : int = 400
 var direction : int
 var damage : int = 1
 
+
+
 func _physics_process(delta):
 	move_local_x(direction * speed * delta)
+	if direction == -1:
+		bullet.flip_h = true
 
 func _on_timer_timeout():
 	queue_free()

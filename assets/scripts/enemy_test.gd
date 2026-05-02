@@ -1,13 +1,11 @@
 extends CharacterBody2D
 
 var deathEffect = preload("res://assets/scenes/areas/enemy_death_effect.tscn")
+var bullet = preload("res://assets/scenes/areas/bullet.tscn")
 @onready var ac = $audio_controller
-var health : int = 3
-
+@onready var muzzle : Marker2D = $BossMuzzle
+var health : int = 30
 const gravity = 1000
-
-func _ready() -> void:
-	pass
 
 func _physics_process(delta: float) -> void:
 	enemy_gravity(delta)
@@ -15,7 +13,6 @@ func _physics_process(delta: float) -> void:
 
 func enemy_gravity(delta : float):
 	velocity.y += gravity * delta
-
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	print("hurtbox area entered")
@@ -27,14 +24,21 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 		
 	elif area.has_method("get_damage_amount"):
 		var node = area as Node
-		health -= node.damage
+		health -= node.damage*3
 		print("Dummy health:", health)
 		ac.play_melee_hit()
-		
-	
 		
 	if health <= 0:
 		var enemy_death_effect_instance = deathEffect.instantiate() as Node2D
 		enemy_death_effect_instance.global_position = global_position
 		get_parent().add_child(enemy_death_effect_instance)
 		queue_free()
+		
+	## attacking mechanics
+func player_shooting(_delta):
+	if Input.is_action_just_pressed("attack"):
+		var bulletInstance = bullet.instantiate() as Node2D
+		bulletInstance.direction = -1
+		bulletInstance.global_position = muzzle.global_position
+		get_parent().add_child(bulletInstance)
+		print("shot")

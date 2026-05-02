@@ -115,7 +115,6 @@ class_name PlatformerController2D
 @export var roll: bool
 
 @onready var muzzle : Marker2D = $Muzzle
-@onready var death_zone : Area2D = $death_zone
 @onready var spawnpoint : Node2D = $"../Spawnpoint"
 
 #Music/SFX
@@ -363,14 +362,6 @@ func _process(delta):
 	if run and idle and !dashing and !crouching:
 		if abs(velocity.x) > 0.1 and is_on_floor() and !is_on_wall():
 			anim.speed_scale = abs(velocity.x / 150)
-			footmute = false
-			var vol = -80
-			
-			if not footmute:
-				
-				vol = 0
-			#AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Footsteps"), vol)
-			
 			if att_run_r == true and run:
 				anim.play("run_ranged")
 				att_idle_r = false
